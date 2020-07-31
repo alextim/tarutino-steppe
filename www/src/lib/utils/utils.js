@@ -1,9 +1,6 @@
-import { num2form } from 'num2form';
-
 const isSSR = () => typeof window === 'undefined';
 
 const Utils = {
-  num2form,
   upperFirst: (s) => s[0].toUpperCase() + s.substring(1),
 
   // https://stackoverflow.com/questions/8498592/extract-hostname-name-from-string
