@@ -15,7 +15,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "lint": "eslint --fix src/**/*.{js,jsx,md}",
     "stylelint": "stylelint --syntax css-in-js src/**/*.{js,jsx,ts,tsx,css,scss}",
-    "format": "prettier-eslint --write \"**/*.{js,jsx,json,md}\"",
+    "format": "prettier-eslint --write 'src/**/*.{js,jsx,json,md}'",
     "translations:json2yaml": "node ./scripts/translations-json-to-yaml.js",
     "image:icon-svg-2-png": "node ./scripts/icon-svg-to-png.js",
     "image:favicon": "node ./scripts/icon-png-to-favicon-ico.js",
@@ -24,7 +24,8 @@
     "deploy": "firebase deploy --only hosting",
     "deploy:clean": "yarn run clean:build && firebase deploy --only hosting",
     "check:licenses": "license-checker --production --summary --failOn=GPLv3",
-    "check:security": "audit-ci --critical"
+    "check:security": "audit-ci --critical",
+    "ncu": "ncu -u"
   },
   "dependencies": {
     "@emotion/core": "^10.0.28",
@@ -34,7 +35,7 @@
     "dotenv": "^8.2.0",
     "email-validator": "^2.0.4",
     "emotion-theming": "^10.0.27",
-    "gatsby": "^2.24.15",
+    "gatsby": "^2.24.23",
     "gatsby-image": "^2.4.14",
     "gatsby-plugin-emotion": "^4.3.10",
     "gatsby-plugin-google-analytics": "^2.3.13",
@@ -65,6 +66,7 @@
     "theme-ui": "^0.3.1"
   },
    "devDependencies": {
+    "@hot-loader/react-dom": "^16.13.0",
     "@testing-library/jest-dom": "^5.11.2",
     "@testing-library/react": "^10.4.7",
     "@testing-library/react-hooks": "^3.4.1",

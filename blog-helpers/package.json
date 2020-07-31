@@ -13,6 +13,7 @@
   "scripts": {
     "lint": "eslint --fix src/**/*.{js,jsx,md}",
     "stylelint": "stylelint --syntax css-in-js src/**/*.{js,jsx,ts,tsx,css,scss}",
-    "format": "prettier-eslint --write \"**/*.{js,jsx,json,md}\""
+    "format": "prettier-eslint --write 'src/**/*.{js,jsx,json,md}'",
+    "ncu": "ncu -u"
   }
 }
