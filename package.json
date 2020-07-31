@@ -1,0 +1,59 @@
+{
+  "name": "kat",
+  "private": true,
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn workspace www build",
+    "develop": "yarn workspace www develop",
+    "clean": "yarn workspace www clean",
+    "serve": "yarn workspace www serve",
+    "lint": "yarn workspace www lint",
+    "lint:all": "yarn workspace www lint && yarn workspace num2form lint && yarn workspace blog-helpers lint",
+    "format": "yarn workspace www format",
+    "format:all": "yarn workspace www format && yarn workspace num2form format && yarn workspace blog-helpers format",
+    "deploy": "yarn workspace www deploy"
+  },
+  "workspaces": [
+    "num2form",
+    "www",
+    "blog-helpers"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "{www,num2form,blog-helpers}/src/**/*.{js,jsx}": [
+      "eslint --fix",
+      "prettier-eslint --write"
+    ]
+  },
+  "devDependencies": {
+    "@hot-loader/react-dom": "^16.13.0",
+    "audit-ci": "^3.1.1",
+    "babel-eslint": "^10.1.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-emotion": "^10.0.27",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.5",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.11",
+    "husky": "^4.2.5",
+    "jest": "^26.2.2",
+    "license-checker": "^25.0.1",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5",
+    "prettier-eslint": "^11.0.0",
+    "prettier-eslint-cli": "^5.0.0",
+    "stylelint": "^13.6.1",
+    "stylelint-config-standard": "^20.0.0"
+  }
+}

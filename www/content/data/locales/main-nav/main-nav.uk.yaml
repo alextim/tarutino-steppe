@@ -1,0 +1,10 @@
+- title: Про нас
+  to: /about
+- title: Природа і культура
+  to: /nature-and-culture
+- title: Послуги
+  to: /services
+- title: Галерея
+  to: /gallery
+- title: Контакти
+  to: /contacts
