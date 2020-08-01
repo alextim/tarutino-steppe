@@ -3,7 +3,7 @@ import useScrollYPosition from './useScrollYPosition';
 
 import { useDarkMode, useCookieWarned, useCheckLocalStorageSchema } from './hooks';
 
-import useForm from './useForm';
+import useForm from '../../../packages/form/src/hooks/useForm';
 
 export {
   useLocalStorage,

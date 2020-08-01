@@ -1,8 +1,16 @@
-import React, { useEffect, useRef, useState } from 'react';
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
+import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import disableScroll from 'disable-scroll';
 
-import { ModalWrapper, ModalOverlay, ModalContent, StyledModalCloseButton } from './styled';
+import {
+  styleModalWrapper,
+  styleModalOverlay,
+  styleModalContent,
+  StyledModalCloseButton,
+} from './styled';
 
 const ESC_KEY = 27;
 
@@ -29,16 +37,14 @@ const Modal = ({ children, isOpen = false, close, elementId = 'portal' }) => {
     }
   };
 
-  const ModalCloseButton = () => <StyledModalCloseButton onClick={() => close()} />;
-
   return createPortal(
-    <ModalWrapper ref={ref} tabIndex="-1" onKeyDown={handleKeyDown}>
-      <ModalOverlay />
-      <ModalContent>
+    <div sx={styleModalWrapper} ref={ref} tabIndex="-1" onKeyDown={handleKeyDown}>
+      <div sx={styleModalOverlay} />
+      <div sx={styleModalContent}>
         {children}
-        <ModalCloseButton />
-      </ModalContent>
-    </ModalWrapper>,
+        <StyledModalCloseButton onClick={close} />
+      </div>
+    </div>,
     document.getElementById(elementId),
   );
 };

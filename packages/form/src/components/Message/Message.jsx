@@ -1,38 +1,37 @@
 /* eslint-disable import/no-duplicates */
 /** @jsx jsx */
-import { css, jsx } from '@emotion/core';
-import styled from '@emotion/styled';
+import { jsx } from 'theme-ui';
 import { FaExclamationTriangle } from 'react-icons/fa';
 import { FaCheckCircle } from 'react-icons/fa';
 
-const iconStyle = css({
+const iconStyle = {
   marginRight: '1rem',
   width: '3rem',
   height: '3rem',
-});
+};
 
-const Wrapper = styled.div`
-  display: flex;
-`;
+const wrapperStyle = {
+  display: 'flex',
+};
 
 const Message = ({ type, children }) => {
   let icon = null;
   switch (type) {
     case 'error':
-      icon = <FaExclamationTriangle css={[iconStyle, { color: 'red' }]} />;
+      icon = <FaExclamationTriangle sx={{ ...iconStyle, color: 'red' }} />;
       break;
     case 'success':
-      icon = <FaCheckCircle css={[iconStyle, { color: 'green' }]} />;
+      icon = <FaCheckCircle sx={{ ...iconStyle, color: 'green' }} />;
       break;
     default:
       break;
   }
 
   return (
-    <Wrapper>
+    <div sx={wrapperStyle}>
       {icon}
       <div>{children}</div>
-    </Wrapper>
+    </div>
   );
 };
 

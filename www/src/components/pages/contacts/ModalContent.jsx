@@ -1,11 +1,10 @@
 import React from 'react';
+import { Message, ModalHeader, ModalFooter, ModalBody } from '@ait/form';
 
 import { useTranslation } from '../../../i18n';
 
 import Spinner from '../../Spinner';
 import Button from '../../Button';
-import Message from '../../Message';
-import { ModalHeader, ModalFooter, ModalBody } from '../../Modal';
 
 const ModalContent = ({ loading, error, handleButtonClick }) => {
   const { t } = useTranslation();

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import * as EmailValidator from 'email-validator';
-import { InputControl, TextAreaControl, HoneyPotInput } from '@ait/common-ui';
+import { useForm, useModal, InputControl, TextAreaControl, HoneyPotInput } from '@ait/form';
 import {
   EMAIL_FIELD,
   NAME_MIN_LENGTH,
@@ -17,14 +17,12 @@ import {
 
 import { useTranslation } from '../../../i18n';
 
-import { useForm } from '../../../hooks';
-import useModal from '../../Modal';
 import Button from '../../Button';
 import sendData from '../../../services/sendData';
 
 import ModalContent from './ModalContent';
 
-const AUTOCLOSE_DELAY = 5000; // 5 secs
+const AUTOCLOSE_DELAY = 120000; // 5 secs
 /*
 let timer;
 const timeout = (ms) =>
