@@ -2,11 +2,11 @@
 /** @jsx jsx */
 import { jsx, Heading } from 'theme-ui';
 import { graphql } from 'gatsby';
+
+import { Container } from '@ait/common-ui';
+
 import SEO from '../components/SEO';
-
 import Layout from '../components/Layout';
-
-import Container from '../components/Container';
 
 const NotFoundTemplate = ({ data, path, pageContext: { locale } }) => {
   const { translations, address, mainNav, footerNav, socialLinks } = data;

@@ -2,8 +2,6 @@
 import { jsx } from 'theme-ui';
 import { Link } from 'gatsby';
 
-import useFooterNavItems from '../../hooks/useFooterNavItems';
-
 const wrapStyle = {
   display: 'inline-flex',
   flexDirection: 'row',
@@ -22,17 +20,14 @@ const linkStyle = {
   },
 };
 
-const FooterNavigation = () => {
-  const navItems = useFooterNavItems();
-  return (
-    <div sx={wrapStyle}>
-      {navItems.map(({ to, title }) => (
-        <Link key={to} sx={linkStyle} to={to}>
-          {title}
-        </Link>
-      ))}
-    </div>
-  );
-};
+const FooterNavigation = ({ items }) => (
+  <div sx={wrapStyle}>
+    {items.map(({ to, title }) => (
+      <Link key={to} sx={linkStyle} to={to}>
+        {title}
+      </Link>
+    ))}
+  </div>
+);
 
 export default FooterNavigation;

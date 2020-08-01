@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import Container from '../Container';
+import { Container } from '@ait/common-ui';
 
 import Navbar from '../Navbar';
 

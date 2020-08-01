@@ -1,23 +1,28 @@
 import React, { useState } from 'react';
 import * as EmailValidator from 'email-validator';
-import { useTranslation } from '../../../i18n';
+import { InputControl, TextAreaControl, HoneyPotInput } from '@ait/common-ui';
+import {
+  EMAIL_FIELD,
+  NAME_MIN_LENGTH,
+  NAME_MAX_LENGTH,
+  EMAIL_MIN_LENGTH,
+  EMAIL_MAX_LENGTH,
+  MESSAGE_MIN_LENGTH,
+  MESSAGE_MAX_LENGTH,
+  NAME_PATTERN,
+  validateNameLength,
+  validateEmailLength,
+  validateMessageLength,
+} from '@ait/contact-form-validators';
 
-import EMAIL_FIELD from './email-field-name';
+import { useTranslation } from '../../../i18n';
 
 import { useForm } from '../../../hooks';
 import useModal from '../../Modal';
 import Button from '../../Button';
-import { InputControl, TextAreaControl, HoneyPotInput } from '../../Form';
 import sendData from '../../../services/sendData';
 
 import ModalContent from './ModalContent';
-
-const NAME_MIN_LENGTH = 2;
-const NAME_MAX_LENGTH = 40;
-const EMAIL_MIN_LENGTH = 3;
-const EMAIL_MAX_LENGTH = 254;
-const MESSAGE_MIN_LENGTH = 2;
-const MESSAGE_MAX_LENGTH = 256;
 
 const AUTOCLOSE_DELAY = 5000; // 5 secs
 /*
@@ -41,19 +46,19 @@ const ContactForm = () => {
 
   const validateName = (x) => {
     const value = x ? x.trim() : x;
-    if (value.length >= NAME_MIN_LENGTH && value.length <= NAME_MAX_LENGTH) {
-      return '';
+    if (!validateNameLength(value)) {
+      return t('validation.length', {
+        name: t('cf.name'),
+        min: NAME_MIN_LENGTH,
+        max: NAME_MAX_LENGTH,
+      });
     }
-    return t('validation.length', {
-      name: t('cf.name'),
-      min: NAME_MIN_LENGTH,
-      max: NAME_MAX_LENGTH,
-    });
+    return '';
   };
 
   const validateEmail = (x) => {
     const value = x ? x.trim() : x;
-    if (value.length < EMAIL_MIN_LENGTH || value.length > EMAIL_MAX_LENGTH) {
+    if (!validateEmailLength(value)) {
       return t('validation.length', {
         name: 'E-mail',
         min: EMAIL_MIN_LENGTH,
@@ -68,14 +73,14 @@ const ContactForm = () => {
 
   const validateMessage = (x) => {
     const value = x ? x.trim() : x;
-    if (value.length >= MESSAGE_MIN_LENGTH && value.length <= MESSAGE_MAX_LENGTH) {
-      return '';
+    if (!validateMessageLength(value)) {
+      return t('validation.length', {
+        name: t('cf.message'),
+        min: MESSAGE_MIN_LENGTH,
+        max: MESSAGE_MAX_LENGTH,
+      });
     }
-    return t('validation.length', {
-      name: t('cf.message'),
-      min: MESSAGE_MIN_LENGTH,
-      max: MESSAGE_MAX_LENGTH,
-    });
+    return '';
   };
 
   const validationSchema = {
@@ -84,7 +89,7 @@ const ContactForm = () => {
       required: t('validation.required', { name: t('cf.name') }),
       validate: validateName,
       pattern: {
-        value: /^([a-zA-Zа-яА-ЯієїґҐЄІЇ]+\s)*[a-zA-Zа-яА-ЯієїґҐЄІЇ]+$/,
+        value: NAME_PATTERN,
         message: t('validation.only_symbols'),
       },
     },

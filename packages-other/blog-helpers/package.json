@@ -1,5 +1,5 @@
 {
-  "name": "blog-helpers",
+  "name": "@ait/blog-helpers",
   "version": "0.0.1",
   "main": "index.js",
   "author": "Oleksii Tymoshenko <buildmnt@gmail.com>",

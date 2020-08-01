@@ -1,0 +1,24 @@
+{
+  "name": "@ait/common-ui",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Oleksii Tymoshenko <buildmnt@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "gatsby": ">=2.24.23",
+    "react": ">=16.13.1",
+    "react-dom": ">=16.13.1",
+    "theme-ui": ">=0.3.1"
+  },
+  "scripts": {
+    "lint": "eslint --fix src/**/*.{js,jsx,md}",
+    "stylelint": "stylelint --syntax css-in-js src/**/*.{js,jsx,ts,tsx,css,scss}",
+    "format": "prettier-eslint --write 'src/**/*.{js,jsx,json,md}'",
+    "ncu": "ncu -u"
+  },
+  "repository": "https://github.com/alextim/kat"
+}

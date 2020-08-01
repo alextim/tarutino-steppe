@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 
-import Container from '../Container';
+import { Container } from '@ait/common-ui';
+
 import Layout from './BaseLayout';
 import sizes from '../../gatsby-plugin-theme-ui/sizes';
 

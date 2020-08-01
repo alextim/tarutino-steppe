@@ -27,7 +27,7 @@ const Icon = ({ iconName }) => {
   if (!iconName) {
     return null;
   }
-  return icons[iconName] || `Pls, provide icon ${iconName}`;
+  return icons[iconName] || `Pls, provide icon "${iconName}"`;
 };
 
 export default Icon;

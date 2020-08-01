@@ -28,6 +28,8 @@
     "ncu": "ncu -u"
   },
   "dependencies": {
+    "@ait/common-ui": "^0.0.1",
+    "@ait/contact-form-validators": "^0.0.1",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
     "@theme-ui/presets": "^0.3.0",

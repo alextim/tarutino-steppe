@@ -1,0 +1,20 @@
+{
+  "name": "@ait/num2form",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Oleksii Tymoshenko <buildmnt@gmail.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+
+  },
+  "scripts": {
+    "lint": "eslint --fix src/**/*.{js,jsx,md}",
+    "stylelint": "stylelint --syntax css-in-js src/**/*.{js,jsx,ts,tsx,css,scss}",
+    "format": "prettier-eslint --write 'src/**/*.{js,jsx,json,md}'",
+    "ncu": "ncu -u"
+  }
+
+}

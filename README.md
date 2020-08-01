@@ -55,7 +55,9 @@ git clone https://github.com/your-account-name/kat.git
    - Enter your GitHub password.
 1. Then select repository `your-repository-name`.
 1. Check **Site settings**.  
-   **Publish directoty** field should to be set to `public\`.
+   These fields should to be set as follow:
+   - **Build command**: `yarn build`
+   - **Publish directoty**: `www/public`
 2. Click **Deploy site** button.  
    In few minutes your site will be live!
 
