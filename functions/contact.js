@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 const sgMail = require('@sendgrid/mail');
 
-const { SENDGRID_API_KEY, SENDGRID_TO_EMAIL, APP_ORIGIN } = process.env;
+const { SENDGRID_API_KEY, SENDGRID_TO_EMAIL, URL } = process.env;
 // const SENDGRID_API_KEY = '';
 // const SENDGRID_TO_EMAIL = '@gmail.com';
 // const APP_ORIGIN = '';
@@ -21,7 +21,7 @@ const {
 
 const utils = require('./src/utils/helpers');
 
-const validateOrigin = (event) => !event.headers.origin || event.headers.origin === APP_ORIGIN;
+const validateOrigin = (event) => !event.headers.origin || event.headers.origin === URL;
 const isSpam = (body) => body.email;
 
 const sanitizeField = (x, minLength, maxLength) => {
@@ -66,6 +66,7 @@ const sanitize = (body) => {
 };
 
 exports.handler = async (event) => {
+  console.log(URL);
   if (!validateOrigin(event)) {
     return { statusCode: 401, body: 'Bad origin' };
   }
@@ -91,7 +92,7 @@ exports.handler = async (event) => {
   } catch {
     return { statusCode: 400, body: 'Bad data' };
   }
-  console.log(body);
+
   if (isSpam(body)) {
     return { statusCode: 403, body: 'Forbidden' };
   }
@@ -117,20 +118,20 @@ exports.handler = async (event) => {
     text,
     html,
   };
-  console.log(msg);
   try {
     await sgMail.send(msg);
-    console.log('ok');
-
     return {
       statusCode: 200,
       body: 'ok',
     };
-  } catch (e) {
-    console.error(e.response.body.errors);
+  } catch (err) {
+    console.error(err);
+    if (err.response) {
+      console.error(err.response.body);
+    }
     return {
-      statusCode: e.code,
-      body: e.message,
+      statusCode: err.code,
+      body: err.message,
     };
   }
 };
