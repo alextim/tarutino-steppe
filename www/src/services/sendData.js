@@ -17,6 +17,8 @@ const sendData = async (data) => {
   };
 
   const res = await fetch(endpoint, params);
+  // eslint-disable-next-line no-console
+  console.log('res', res);
   if (res.ok && res.status < 300) {
     // console.warn('Success');
     return true;

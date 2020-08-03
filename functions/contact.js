@@ -2,6 +2,10 @@
 const sgMail = require('@sendgrid/mail');
 
 const { SENDGRID_API_KEY, SENDGRID_TO_EMAIL, APP_ORIGIN } = process.env;
+// const SENDGRID_API_KEY = '';
+// const SENDGRID_TO_EMAIL = '@gmail.com';
+// const APP_ORIGIN = '';
+
 sgMail.setApiKey(SENDGRID_API_KEY);
 
 const {
@@ -17,8 +21,8 @@ const {
 
 const utils = require('./src/utils/helpers');
 
-const validateOrigin = (event) => event.headers.origin === APP_ORIGIN;
-const isSpam = (event) => event.body.email;
+const validateOrigin = (event) => !event.headers.origin || event.headers.origin === APP_ORIGIN;
+const isSpam = (body) => body.email;
 
 const sanitizeField = (x, minLength, maxLength) => {
   if (!x) {
@@ -45,16 +49,16 @@ const sanitizeName = (val) => {
 
 const sanitizeMessage = (val) => sanitizeField(val, MESSAGE_MIN_LENGTH, MESSAGE_MAX_LENGTH);
 
-const sanitize = (event) => {
-  const name = sanitizeName(event.body.name);
+const sanitize = (body) => {
+  const name = sanitizeName(body.name);
   if (!name) {
     return false;
   }
-  const email = sanitizeEmail(event.body[EMAIL_FIELD]);
+  const email = sanitizeEmail(body[EMAIL_FIELD]);
   if (!email) {
     return false;
   }
-  const message = sanitizeMessage(event.body.message);
+  const message = sanitizeMessage(body.message);
   if (!message) {
     return false;
   }
@@ -81,40 +85,49 @@ exports.handler = async (event) => {
     return { statusCode: 400, body: 'Bad data' };
   }
 
-  if (isSpam(event)) {
+  let body;
+  try {
+    body = JSON.parse(event.body);
+  } catch {
+    return { statusCode: 400, body: 'Bad data' };
+  }
+  console.log(body);
+  if (isSpam(body)) {
     return { statusCode: 403, body: 'Forbidden' };
   }
 
-  const sanitized = sanitize(event);
+  const sanitized = sanitize(body);
   if (!sanitized) {
     return { statusCode: 400, body: 'Bad data' };
   }
 
-  const { email } = sanitized;
+  // const { email } = sanitized;
 
-  const body = Object.keys(sanitized).map((k) => {
+  const aBody = Object.keys(sanitized).map((k) => {
     return `${k}: ${sanitized[k]}`;
   });
 
-  const html = body.join('<br><br>');
-  const text = body.join('\n\n');
+  const html = aBody.join('<br><br>');
+  const text = aBody.join('\n\n');
 
   const msg = {
     to: SENDGRID_TO_EMAIL,
-    from: email,
+    from: SENDGRID_TO_EMAIL,
     subject: 'Contact Form Submission',
     text,
     html,
   };
-
+  console.log(msg);
   try {
     await sgMail.send(msg);
+    console.log('ok');
 
     return {
       statusCode: 200,
-      body: 'Message sent',
+      body: 'ok',
     };
   } catch (e) {
+    console.error(e.response.body.errors);
     return {
       statusCode: e.code,
       body: e.message,

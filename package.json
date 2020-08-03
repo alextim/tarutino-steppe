@@ -17,7 +17,10 @@
     "deploy": "yarn workspace www deploy",
     "deploy:functions": "yarn workspace contact-form-firebase-functions deploy",
     "ncu": "ncu -u && yarn workspaces run ncu",
-    "git:tracked": "git ls-tree -r master --name-only"
+    "git:tracked": "git ls-tree -r master --name-only",
+    "f:build": "netlify functions:build --debug --src functions",
+    "f:invoke": "netlify functions:invoke contact --debug --payload \"{\"foo\": 1}\"",
+    "start:lambda": "netlify-lambda serve functions"
   },
   "workspaces": {
     "packages": [
@@ -55,6 +58,7 @@
     "jest": "^26.2.2",
     "license-checker": "^25.0.1",
     "lint-staged": "^10.2.11",
+    "netlify-lambda": "^2.0.1",
     "prettier": "^2.0.5",
     "prettier-eslint": "^11.0.0",
     "prettier-eslint-cli": "^5.0.0",

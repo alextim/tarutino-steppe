@@ -12,18 +12,27 @@
 - Theme-UI & Emotion styling
 - preval.macro
 - ESLint (airbnb) + Prettier
-- Firebase: functions & database
-- Netlify: hosting
-
+- Netlify: hosting & cloud functions
+- SendGrid: mailing 
+  
 ## License
 
 MIT
 
+## Pricing (August, 2020)
+### Netlify
+#### Hosting
+300 minutes /month
+#### Functions on Level 0 (free)
+- Receive up to 125K function endpoint requests per month
+- Use up to 100 hours of function run time per month
+### SendGrid
+Send 40,000 emails for 30 days, then 100/day forever.
 ## Installation
 
 ### Requirements
 
-1. Have [Google](https://google.com) account.
+1. Have [SendGrid](https://sendgrid.com) account.
 1. Have [GitHub](https://github.com) account.
 1. Have [Netlify](https://netlify.com) account.
 1. Have installed **Git** on your local computer. You could download it from [here](https://git-scm.com/download).

@@ -19,10 +19,10 @@
   },
   "dependencies": {
     "@sendgrid/mail": "^7.2.2",
-    "dotenv": "^8.2.0"
+    "netlify-lambda": "^2.0.1"
   },
   "devDependencies": {
   },
-  "repository": "https://github.com/alextim/kat"
+  "repository": "https://github.com/alextim/kat-2"
 }
 
