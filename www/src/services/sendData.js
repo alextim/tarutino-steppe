@@ -1,5 +1,8 @@
+const END_POINT = '/.netlify/functions/contact';
+// const END_POINT = 'https://us-central1-contact-form-test-ab6ae.cloudfunctions.net/contact';
+
 const sendData = async (data) => {
-  const endpoint = 'https://us-central1-contact-form-test-ab6ae.cloudfunctions.net/contact';
+  const endpoint = END_POINT;
   const params = {
     method: 'POST', // *GET, POST, PUT, DELETE, etc.
     mode: 'cors', // no-cors, *cors, same-origin

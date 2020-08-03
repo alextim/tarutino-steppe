@@ -1,6 +1,7 @@
 [build]
   command = "yarn build"
   publish = "www/public"
+  functions = "functions"
 
 [[headers]]
   for = "/*"
