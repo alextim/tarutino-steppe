@@ -1,10 +1,8 @@
 /* eslint-disable no-console */
 const sgMail = require('@sendgrid/mail');
 
-const { SENDGRID_API_KEY, SENDGRID_TO_EMAIL } = process.env;
+const { SENDGRID_API_KEY, SENDGRID_TO_EMAIL, APP_ORIGIN } = process.env;
 sgMail.setApiKey(SENDGRID_API_KEY);
-
-const APP_ORIGIN = 'https://tarutino-steppe.netlify.com';
 
 const {
   EMAIL_FIELD,
