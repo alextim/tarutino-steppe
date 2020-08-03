@@ -251,6 +251,7 @@ More convenient way to edit translations.
 
 ## Social Links
 If you need them, please, add source files to folder `[PROJECT_DIR]\content\data\locales\social-links`.  
+They will be displayed in footer.  
 Valid file names:
 ```
 social-links.en.yaml
@@ -309,20 +310,20 @@ It looks like
 
 ```md
 ---
-title: *Page Title*
-description: *Second Line in page header*
-metaTitle: *for SEO. If it's omitted the **title** will be used*
-metaDescription: *for SEO. If it's omitted the **description** will be used*
+title: Page Title
+description: Second Line in page header
+metaTitle: for SEO. If it's omitted the "title" will be used
+metaDescription: for SEO. If it's omitted the "description"will be used
 
 cover:
-  default: *your-special-banner.jpg*
-  mobile: *your-special-banner-used-on-small-screens.jpg*
-  alt: *for SEO, alternate text for image*
-  author: *image author name*
+  default: your-special-banner.jpg
+  mobile: your-special-banner-used-on-small-screens.jpg
+  alt: for SEO, alternate text for image
+  author: image author name
 
-slug: *used for page route during build*
-template: *name of te template sed during site build*
-noindex: ***true** or **false** - show/hide page from crawler robots*
+slug: used to create the page route during build
+template: name of the template used during build
+noindex: "true" or "false" - show/hide page from crawler robots
 
 ...other page specific parts
 ---
