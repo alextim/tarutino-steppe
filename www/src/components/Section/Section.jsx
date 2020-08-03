@@ -66,27 +66,33 @@ const Section = ({
   children,
 }) => {
   const hasText = title || subtitle || text;
-
+  const sectionStyle = {
+    ...styleSection,
+    ...(small ? styleSmall : {}),
+    ...(gray ? styleGray : {}),
+    ...(noPadding ? styleNoPading : {}),
+    ...extraStyle,
+  };
+  if (noContainer) {
+    return (
+      <section sx={sectionStyle}>
+        {hasText && (
+          <div sx={wrapStyle}>
+            <Text title={title} subtitle={subtitle} text={text} />
+          </div>
+        )}
+        {children}
+      </section>
+    );
+  }
   return (
-    <section
-      sx={{
-        ...styleSection,
-        ...(small ? styleSmall : {}),
-        ...(gray ? styleGray : {}),
-        ...(noPadding ? styleNoPading : {}),
-        ...extraStyle,
-      }}
-    >
-      {hasText && noContainer ? (
-        <div sx={wrapStyle}>
-          <Text title={title} subtitle={subtitle} text={text} />
-        </div>
-      ) : (
+    <section sx={sectionStyle}>
+      {hasText && (
         <Container sx={wrapStyle}>
           <Text title={title} subtitle={subtitle} text={text} />
         </Container>
       )}
-      {noContainer ? children : <Container>{children}</Container>}
+      <Container>{children}</Container>
     </section>
   );
 };
