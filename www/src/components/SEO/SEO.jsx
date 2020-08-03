@@ -65,7 +65,7 @@ const SEO = ({ title, description, locale, pathname, canonical, noindex = false,
   if (phone) {
     schemaOrg.telephone = phone.join();
   }
-  if (Object.keys(socialLinks).length) {
+  if (socialLinks) {
     schemaOrg.sameAs = Object.keys(socialLinks).map((key) => socialLinks[key].url);
   }
   if (Array.isArray(openingHours)) {
@@ -140,7 +140,9 @@ const SEO = ({ title, description, locale, pathname, canonical, noindex = false,
         .map((code) => (
           <meta key={code} property="og:locale:alternate" content={i18n.locales[code].ogLocale} />
         ))}
-      {socialLinks.facebook && <meta property="og:site_name" content={socialLinks.facebook.url} />}
+      {socialLinks && socialLinks.facebook && (
+        <meta property="og:site_name" content={socialLinks.facebook.url} />
+      )}
       <meta property="og:url" content={URL} />
       <meta property="og:type" content={article ? 'article' : 'website'} />
       <meta property="og:title" content={title} />
@@ -149,9 +151,10 @@ const SEO = ({ title, description, locale, pathname, canonical, noindex = false,
       <meta property="og:image:alt" content={description} />
       <meta property="og:image:width" content={ogImage.width} />
       <meta property="og:image:height" content={ogImage.height} />
-      {Object.keys(socialLinks).map((key) => (
-        <meta key={key} property="og:see_also" content={socialLinks[key].url} />
-      ))}
+      {socialLinks &&
+        Object.keys(socialLinks).map((key) => (
+          <meta key={key} property="og:see_also" content={socialLinks[key].url} />
+        ))}
 
       <meta name="twitter:card" content="summary_large_image" />
       {(config.twitterCreator || config.twitterSite) && (

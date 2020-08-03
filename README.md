@@ -19,23 +19,24 @@
 
 MIT
 
-## Pricing (August, 2020)
+## Free tier limits on August, 2020.
 ### Netlify
 #### Hosting
-300 minutes /month
-#### Functions on Level 0 (free)
+build - 300 minutes /month
+#### Functions
 - Receive up to 125K function endpoint requests per month
 - Use up to 100 hours of function run time per month
 ### SendGrid
-Send 40,000 emails for 30 days, then 100/day forever.
+Send 40,000 emails for first 30 days after registartion, then 100/day forever.
 ## Installation
 
 ### Requirements
 
 1. Have [SendGrid](https://sendgrid.com) account.
-1. Have [GitHub](https://github.com) account.
-1. Have [Netlify](https://netlify.com) account.
-1. Have installed **Git** on your local computer. You could download it from [here](https://git-scm.com/download).
+   You need API key and verified e-mail.
+2. Have [GitHub](https://github.com) account.
+3. Have [Netlify](https://netlify.com) account.
+4. Have installed **Git** on your local computer. You could download it from [here](https://git-scm.com/download).
 
 ### Steps
 #### Fork Source Repository and clone it on local computer
@@ -67,6 +68,15 @@ git clone https://github.com/your-account-name/kat-2.git
    These fields should to be set as follow:
    - **Build command**: `yarn build`
    - **Publish directoty**: `www/public`
+1. Go to **Environment variables**.  
+   Add following vars:
+   |  Key              | Value
+   |---                |---
+   | SENDGRID_API_KEY  | your SendGrid API key 
+   | SENDGRID_TO_EMAIL | your e-mail verified by SendGrid
+   | WARNINGS          | true
+
+
 2. Click **Deploy site** button.  
    In few minutes your site will be live!
 
@@ -239,6 +249,24 @@ More convenient way to edit translations.
 - Run command `npm run translations:j2y`.
   It fires script which transform json-source to yaml.
 
+## Social Links
+If you need them, please, add source files to folder `[PROJECT_DIR]\content\data\locales\social-links`.  
+Valid file names:
+```
+social-links.en.yaml
+social-links.ru.yaml
+social-links.uk.yaml
+```
+
+File content sample:
+```yaml
+- code: facebook
+  url:  https://www.facebook.com/your-facebook-address
+  text: Follow us on Facebook
+- code: instagram
+  url:  https://www.instagram.com/your-facebook-address
+  text: Follow us on Instagram
+```
 ## Pages
 
 Pages are located in the folder: **[PROJECT_DIR]\src\pages**.
@@ -246,14 +274,12 @@ Pages are located in the folder: **[PROJECT_DIR]\src\pages**.
 Each page occupies one subfolder here.
 
 Name pattern:
-`{file name}.{locale}.{extension}`
+`{file name}.{locale}.md`
 
 File name: in English alpahaber, no spaces, dots. Only letters in lower case.
 Special name is **index** (explanation in **Routes**) .
 
 Locale: **uk**, **en** or **ru**.
-
-Extension: **md**.
 
 Sample for valid file names:
 
