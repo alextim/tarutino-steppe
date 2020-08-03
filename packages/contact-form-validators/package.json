@@ -10,9 +10,8 @@
   },
   "peerDependencies": {},
   "scripts": {
-    "lint": "eslint --fix src/**/*.{js,jsx,md}",
-    "stylelint": "stylelint --syntax css-in-js src/**/*.{js,jsx,ts,tsx,css,scss}",
-    "format": "prettier-eslint --write 'src/**/*.{js,jsx,json,md}'",
+    "lint": "eslint --fix *.{js,md}",
+    "format": "prettier-eslint --write '*.{js,json,md}'",
     "ncu": "ncu -u"
   },
   "repository": "https://github.com/alextim/kat"

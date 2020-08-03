@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-import * as EmailValidator from 'email-validator';
-import { useForm, useModal, InputControl, TextAreaControl, HoneyPotInput } from '@ait/form';
+import React from 'react';
 import {
   EMAIL_FIELD,
   NAME_MIN_LENGTH,
@@ -9,106 +7,62 @@ import {
   EMAIL_MAX_LENGTH,
   MESSAGE_MIN_LENGTH,
   MESSAGE_MAX_LENGTH,
-  NAME_PATTERN,
-  validateNameLength,
-  validateEmailLength,
-  validateMessageLength,
 } from '@ait/contact-form-validators';
+import { ContactFormBase } from '@ait/form';
 
 import { useTranslation } from '../../../i18n';
 
+import Spinner from '../../Spinner';
 import Button from '../../Button';
 import sendData from '../../../services/sendData';
 
-import ModalContent from './ModalContent';
-
-const AUTOCLOSE_DELAY = 120000; // 5 secs
-/*
-let timer;
-const timeout = (ms) =>
-  new Promise((resolve) => {
-    timer = setTimeout(resolve, ms);
-    return timer;
-  });
-
-async function sendDataMock() {
-  await timeout(4000);
-  // throw new Error('test error');
-}
-*/
-
 const ContactForm = () => {
-  const [error, setError] = useState('');
-  const [loading, setLoading] = useState(true);
   const { t } = useTranslation();
 
-  const validateName = (x) => {
-    const value = x ? x.trim() : x;
-    if (!validateNameLength(value)) {
-      return t('validation.length', {
-        name: t('cf.name'),
-        min: NAME_MIN_LENGTH,
-        max: NAME_MAX_LENGTH,
-      });
-    }
-    return '';
-  };
+  const NAME_LABEL = t('cf.name');
+  const EMAIL_LABEL = 'E-mail';
+  const MESSAGE_LABEL = t('cf.message');
 
-  const validateEmail = (x) => {
-    const value = x ? x.trim() : x;
-    if (!validateEmailLength(value)) {
-      return t('validation.length', {
-        name: 'E-mail',
-        min: EMAIL_MIN_LENGTH,
-        max: EMAIL_MAX_LENGTH,
-      });
-    }
-    if (!EmailValidator.validate(value)) {
-      return t('validation.invalid', { name: 'E-mail' });
-    }
-    return '';
-  };
-
-  const validateMessage = (x) => {
-    const value = x ? x.trim() : x;
-    if (!validateMessageLength(value)) {
-      return t('validation.length', {
-        name: t('cf.message'),
-        min: MESSAGE_MIN_LENGTH,
-        max: MESSAGE_MAX_LENGTH,
-      });
-    }
-    return '';
-  };
-
-  const validationSchema = {
-    email: {},
+  const content = {
     name: {
-      required: t('validation.required', { name: t('cf.name') }),
-      validate: validateName,
-      pattern: {
-        value: NAME_PATTERN,
-        message: t('validation.only_symbols'),
+      label: NAME_LABEL,
+      placeholder: t('cf.your_name'),
+      validationMessage: {
+        required: t('validation.required', { name: NAME_LABEL }),
+        length: t('validation.length', {
+          name: NAME_LABEL,
+          min: NAME_MIN_LENGTH,
+          max: NAME_MAX_LENGTH,
+        }),
+        pattern: t('validation.only_symbols'),
       },
     },
     [EMAIL_FIELD]: {
-      required: t('validation.required', { name: 'E-mail' }),
-      validate: validateEmail,
+      label: EMAIL_LABEL,
+      placeholder: t('cf.your_email'),
+      validationMessage: {
+        required: t('validation.required', { name: EMAIL_LABEL }),
+        length: t('validation.length', {
+          name: EMAIL_LABEL,
+          min: EMAIL_MIN_LENGTH,
+          max: EMAIL_MAX_LENGTH,
+        }),
+        invalid: t('validation.invalid', { name: EMAIL_LABEL }),
+      },
     },
     message: {
-      required: t('validation.required', { name: t('cf.message') }),
-      validate: validateMessage,
+      label: MESSAGE_LABEL,
+      placeholder: t('cf.your_message'),
+      validationMessage: {
+        required: t('validation.required', { name: MESSAGE_LABEL }),
+        length: t('validation.length', {
+          name: MESSAGE_LABEL,
+          min: MESSAGE_MIN_LENGTH,
+          max: MESSAGE_MAX_LENGTH,
+        }),
+      },
     },
   };
-
-  const onClose = () => {
-    if (loading) {
-      // clearTimeout(timer);
-      setLoading(false);
-    }
-  };
-
-  const [Modal, openModal, closeModal] = useModal('portal', { onClose });
 
   const getErrorTranslation = (err) => {
     switch (parseInt(err, 10)) {
@@ -122,67 +76,52 @@ const ContactForm = () => {
     }
   };
 
-  const onSubmitForm = async (values) => {
-    setError('');
-    setLoading(true);
-    try {
-      openModal();
-      // await sendDataMock();
-      return await sendData(values);
-    } catch (err) {
-      // clearTimeout(timer);
-      setError(getErrorTranslation(err.message));
-      return false;
-    } finally {
-      setLoading(false);
-      closeModal(AUTOCLOSE_DELAY);
-    }
+  const modalContent = {
+    error: {
+      heading: t('form.error'),
+      body: (error) => (
+        <>
+          <b>{error}</b>
+          <p>
+            {t('cf.sorry')}
+            <br />
+            {t('cf.try_later')}
+          </p>
+        </>
+      ),
+    },
+    loading: {
+      heading: t('form.sending'),
+      body: t('form.pls_wait'),
+      action: (closeModal) => (
+        <>
+          <Spinner w={2} />
+          <Button onClick={closeModal} primary>
+            {t('form.cancel')}
+          </Button>
+        </>
+      ),
+    },
+    success: {
+      heading: t('form.success'),
+      body: (
+        <>
+          {' '}
+          <p>{t('cf.thanks')}</p>
+          <p>{t('cf.we_will_response')}</p>
+        </>
+      ),
+    },
   };
 
-  const { values, errors, handleOnChange, handleOnSubmit /* , disable */ } = useForm(
-    validationSchema,
-    onSubmitForm,
-  );
-
   return (
-    <>
-      <Modal>
-        <ModalContent error={error} loading={loading} handleButtonClick={closeModal} />
-      </Modal>
-
-      <form onSubmit={handleOnSubmit} noValidate>
-        <HoneyPotInput value={values.email} onChange={handleOnChange} />
-        <InputControl
-          label={t('cf.name')}
-          name="name"
-          required={validationSchema.name.required}
-          placeholder={t('cf.your_name')}
-          value={values.name}
-          error={errors.name}
-          onChange={handleOnChange}
-        />
-        <InputControl
-          label="E-mail"
-          name={EMAIL_FIELD}
-          type="email"
-          required={validationSchema[EMAIL_FIELD].required}
-          placeholder={t('cf.your_email')}
-          value={values[EMAIL_FIELD]}
-          error={errors[EMAIL_FIELD]}
-          onChange={handleOnChange}
-        />
-        <TextAreaControl
-          label={t('cf.message')}
-          name="message"
-          required={validationSchema.message.required}
-          placeholder={t('cf.your_message')}
-          value={values.message}
-          error={errors.message}
-          onChange={handleOnChange}
-        />
-        <Button type="submit">{t('form.send')}</Button>
-      </form>
-    </>
+    <ContactFormBase
+      content={content}
+      modalContent={modalContent}
+      actionControl={<Button type="submit">{t('form.send')}</Button>}
+      sendData={sendData}
+      getErrorMessage={getErrorTranslation}
+    />
   );
 };
 

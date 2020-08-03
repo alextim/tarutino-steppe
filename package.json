@@ -15,11 +15,14 @@
     "format": "yarn workspace www format",
     "format:all": "yarn workspaces run format",
     "deploy": "yarn workspace www deploy",
-    "ncu": "ncu -u && yarn workspaces run ncu"
+    "deploy:functions": "yarn workspace contact-form-firebase-functions deploy",
+    "ncu": "ncu -u && yarn workspaces run ncu",
+    "git:tracked": "git ls-tree -r master --name-only"
   },
   "workspaces": {
     "packages": [
       "packages/*",
+      "functions",
       "www"
     ]
   },
