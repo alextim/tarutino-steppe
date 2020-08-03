@@ -37,8 +37,9 @@ const onDataNode = (node, actions, getNode, createNodeId, createContentDigest) =
   const { dir, name } = parsedFilePath;
 
   const [type, locale] = name.split('.');
-
+  console.log('onDataNode', type, locale);
   if (dir.split('/')[0] === 'locales' && !isValidLocale(locale, fileNode)) {
+    console.log(fileNode, 'excluded');
     return;
   }
 
@@ -64,6 +65,7 @@ const onDataNode = (node, actions, getNode, createNodeId, createContentDigest) =
         description: `${nodeType} implementation of the Yaml interface`,
       },
     });
+    console.log(nodeType, 'created');
 
     // createParentChildLink({ parent: node, child: getNode(id) });
   };
