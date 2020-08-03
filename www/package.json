@@ -75,8 +75,8 @@
     "preval.macro": "^5.0.0",
     "react-test-renderer": "^16.13.1"
   },
-  "repository": "https://github.com/alextim/kat",
+  "repository": "https://github.com/alextim/kat-2",
   "bugs": {
-    "url": "https://github.com/alextim/kat"
+    "url": "https://github.com/alextim/kat-2"
   }
 }

@@ -31,18 +31,18 @@ MIT
 ### Steps
 #### Fork Source Repository and clone it on local computer
 1. Login to your [GitHub account](https://github.com).
-1. In a browser open the source repository `https://github.com/alextim/kat`.
+1. In a browser open the source repository `https://github.com/alextim/kat-2`.
 1. Create fork from source repository - click **Fork** button  (in the right upper corner of window).
 1. After process finish click button **Code**.
 1. Copy your repository URL.  
-   It should be like this: `https://github.com/your-account-name/kat.git`.
+   It should be like this: `https://github.com/your-account-name/kat-2.git`.
 1. Lanch command prompt on your computer.  
    For Windows it will be: `Start` -> `Windows System` -> `Command Prompt`.
 2. Select desired folder with `cd` (change directory) command.
 3. Clone source repository to selected folder with the next command:
 
 ```
-git clone https://github.com/your-account-name/kat.git
+git clone https://github.com/your-account-name/kat-2.git
 ```
 
 #### Connect your repository to hosting and build site

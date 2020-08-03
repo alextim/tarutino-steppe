@@ -29,5 +29,5 @@
     "format": "prettier-eslint --write 'src/**/*.{js,jsx,json,md}'",
     "ncu": "ncu -u"
   },
-  "repository": "https://github.com/alextim/kat"
+  "repository": "https://github.com/alextim/kat-2"
 }

@@ -8,7 +8,7 @@ const isValidLocale = (locale, fileNode) => {
   if (!locale) {
     const parsedFilePath = path.parse(fileNode.relativePath);
     const { ext } = parsedFilePath;
-    if (!process.env.NO_WARNINGS) {
+    if (process.env.WARNINGS) {
       console.warn(`The file "${fileNode.relativePath}" does not contain locale in it's name'.'`);
       console.warn(`Valid file name sample: "index.${i18n.defaultLang}.${ext}".`);
       console.warn('This file will be excluded from current build.\n');
@@ -16,7 +16,7 @@ const isValidLocale = (locale, fileNode) => {
     return false;
   }
   if (!i18n.isValidLang(locale)) {
-    if (!process.env.NO_WARNINGS) {
+    if (process.env.WARNINGS) {
       console.warn(
         `The file "${fileNode.relativePath}" has unsupported locale "${locale}" in it's name`,
       );
@@ -116,7 +116,7 @@ const onMdNode = (node, actions, getNode, createNodeId, createContentDigest) => 
   }
 
   if (process.env.ONLY && !process.env.ONLY.split(' ').some((p) => p === slug)) {
-    if (!process.env.NO_WARNINGS) {
+    if (process.env.WARNINGS) {
       console.warn(`Path "${slug}" is excluded from build. process.env.ONLY=${process.env.ONLY}`);
     }
     return;
