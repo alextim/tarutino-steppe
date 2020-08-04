@@ -6,9 +6,4 @@ const getRemoteIP = (req) =>
 
 const sanitizeHtml = (val) => val.replace(/<(.|\n)*?>/g, '');
 
-const validateEmail = (email) => {
-  const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/gim;
-  return re.test(String(email).toLowerCase());
-};
-
-module.exports = { getRemoteIP, sanitizeHtml, validateEmail };
+module.exports = { getRemoteIP, sanitizeHtml };

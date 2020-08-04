@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 const sgMail = require('@sendgrid/mail');
+const emailValidator = require('email-validator');
 
 const { SENDGRID_API_KEY, SENDGRID_TO_EMAIL, URL } = process.env;
 // const SENDGRID_API_KEY = '';
@@ -39,7 +40,7 @@ const sanitizeField = (x, minLength, maxLength) => {
 
 const sanitizeEmail = (val) => {
   const sanitized = sanitizeField(val, EMAIL_MIN_LENGTH, EMAIL_MAX_LENGTH);
-  return sanitized && utils.validateEmail(sanitized) ? sanitized : false;
+  return sanitized && emailValidator.validate(sanitized) ? sanitized.toLowerCase() : false;
 };
 
 const sanitizeName = (val) => {

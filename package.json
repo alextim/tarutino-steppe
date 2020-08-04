@@ -19,8 +19,7 @@
     "ncu": "ncu -u && yarn workspaces run ncu",
     "git:tracked": "git ls-tree -r master --name-only",
     "f:build": "netlify functions:build --debug --src functions",
-    "f:invoke": "netlify functions:invoke contact --debug --payload \"{\"foo\": 1}\"",
-    "start:lambda": "netlify-lambda serve functions"
+    "f:invoke": "netlify functions:invoke contact --debug --payload \"{\"foo\": 1}\""
   },
   "workspaces": {
     "packages": [
