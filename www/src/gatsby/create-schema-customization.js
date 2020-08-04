@@ -45,20 +45,7 @@ const generalMdFields = {
     type: 'String!',
   },
 };
-/**
- * Nav
- */
-const navFields = {
-  title: {
-    type: 'String',
-  },
-  to: {
-    type: 'String',
-  },
-  locale: {
-    type: 'String',
-  },
-};
+
 /**
  * YAML
  *
@@ -70,8 +57,19 @@ const yamlFields = {
   type: {
     type: 'String',
   },
+  to: {
+    type: 'String',
+  },
 };
 
+const navItem = {
+  to: {
+    type: 'String',
+  },
+  title: {
+    type: 'String',
+  },
+};
 const translationItem = {
   key: {
     type: 'String',
@@ -184,34 +182,13 @@ module.exports = ({ actions, schema }) => {
     }),
 
     schema.buildObjectType({
-      name: 'MainNav',
-      interfaces: ['Node'],
-      extensions: {
-        infer: false,
-      },
-      fields: {
-        ...navFields,
-      },
-    }),
-
-    schema.buildObjectType({
-      name: 'FooterNav',
-      interfaces: ['Node'],
-      extensions: {
-        infer: false,
-      },
-      fields: {
-        ...navFields,
-      },
-    }),
-
-    schema.buildObjectType({
       name: 'Yaml',
       interfaces: ['Node'],
       extensions: {
         infer: false,
       },
       fields: {
+        ...navItem,
         ...translationItem,
         ...socialLinkItem,
         ...address,

@@ -48,19 +48,25 @@ export const pageQuery = graphql`
     address: yaml(fields: { type: { eq: "address" }, locale: { eq: $locale } }) {
       ...AddressFragment
     }
-    mainNav: allMainNav(filter: { locale: { eq: $locale } }) {
+    mainNav: allYaml(filter: { fields: { type: { eq: "main-nav" }, locale: { eq: $locale } } }) {
       edges {
         node {
           title
-          to
+          fields {
+            to
+          }
         }
       }
     }
-    footerNav: allFooterNav(filter: { locale: { eq: $locale } }) {
+    footerNav: allYaml(
+      filter: { fields: { type: { eq: "footer-nav" }, locale: { eq: $locale } } }
+    ) {
       edges {
         node {
           title
-          to
+          fields {
+            to
+          }
         }
       }
     }

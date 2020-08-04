@@ -28,8 +28,8 @@ const isValidLocale = (locale, fileNode) => {
   return true;
 };
 
-const onDataNode = (node, actions, getNode, createNodeId, createContentDigest) => {
-  const { createNodeField, createNode /* , createParentChildLink */ } = actions;
+const onDataNode = (node, actions, getNode) => {
+  const { createNodeField } = actions;
   const fileNode = getNode(node.parent);
 
   const parsedFilePath = path.parse(fileNode.relativePath);
@@ -37,47 +37,17 @@ const onDataNode = (node, actions, getNode, createNodeId, createContentDigest) =
   const { dir, name } = parsedFilePath;
 
   const [type, locale] = name.split('.');
-  console.log('onDataNode', type, locale);
+
   if (dir.split('/')[0] === 'locales' && !isValidLocale(locale, fileNode)) {
-    console.log(fileNode, 'excluded');
     return;
   }
 
-  const createNavNode = (nodeType) => {
-    const id = createNodeId(`${node.id} >>> ${nodeType}`);
-    const { to, title } = node;
-    const fieldData = {
-      to: i18n.localizePath(to, locale),
-      title,
-      locale,
-    };
-
-    createNode({
-      ...fieldData,
-      // Required fields
-      id,
-      parent: undefined, // node.id,
-      children: [],
-      internal: {
-        type: nodeType,
-        contentDigest: createContentDigest(fieldData),
-        content: JSON.stringify(fieldData),
-        description: `${nodeType} implementation of the Yaml interface`,
-      },
+  if (type === 'main-nav' || type === 'footer-nav') {
+    createNodeField({
+      name: 'to',
+      node,
+      value: i18n.localizePath(node.to, locale),
     });
-    console.log(nodeType, 'created');
-
-    // createParentChildLink({ parent: node, child: getNode(id) });
-  };
-
-  if (type === 'main-nav') {
-    createNavNode('MainNav', locale);
-    return;
-  }
-
-  if (type === 'footer-nav') {
-    createNavNode('FooterNav', locale);
-    return;
   }
 
   createNodeField({
@@ -184,7 +154,7 @@ const onMdNode = (node, actions, getNode, createNodeId, createContentDigest) => 
 
 module.exports = async ({ node, actions, getNode, createNodeId, createContentDigest }) => {
   if (node.internal.type === 'Yaml') {
-    onDataNode(node, actions, getNode, createNodeId, createContentDigest);
+    onDataNode(node, actions, getNode);
     return;
   }
 
