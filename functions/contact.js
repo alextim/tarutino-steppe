@@ -1,11 +1,7 @@
-/* eslint-disable no-console */
 const sgMail = require('@sendgrid/mail');
 const emailValidator = require('email-validator');
 
 const { SENDGRID_API_KEY, SENDGRID_TO_EMAIL, URL } = process.env;
-// const SENDGRID_API_KEY = '';
-// const SENDGRID_TO_EMAIL = '@gmail.com';
-// const APP_ORIGIN = '';
 
 sgMail.setApiKey(SENDGRID_API_KEY);
 
@@ -67,7 +63,6 @@ const sanitize = (body) => {
 };
 
 exports.handler = async (event) => {
-  console.log(URL);
   if (!validateOrigin(event)) {
     return { statusCode: 401, body: 'Bad origin' };
   }
@@ -102,8 +97,6 @@ exports.handler = async (event) => {
   if (!sanitized) {
     return { statusCode: 400, body: 'Bad data' };
   }
-
-  // const { email } = sanitized;
 
   const aBody = Object.keys(sanitized).map((k) => {
     return `${k}: ${sanitized[k]}`;

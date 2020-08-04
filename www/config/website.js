@@ -1,4 +1,4 @@
-const siteUrl = 'https://www.example.com'; // No trailing slash!
+const siteUrl = 'https://tarutino-steppe.netlify.app'; // No trailing slash!
 
 module.exports = {
   /* Meta */
@@ -28,7 +28,7 @@ module.exports = {
   /* Twitter Id */
   twitterCreator: '',
 
-  googleAnalyticsID: 'XXXXXX',
+  googleAnalyticsID: '',
 
   /* Manifest */
   themeColor: '#3498DB',

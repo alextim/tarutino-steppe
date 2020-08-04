@@ -185,11 +185,33 @@ good:
 ### General
 
 File: `[PROJECT_DIR]\src\config\website.js`
-
+Obligue values:
+- siteUrl
+Change it from `https://tarutino-steppe.netlify.app` to your actual site address (NO TRAILING SLASH!).
+Leave these vars as `it is` if you are not using:
+- googleAnalyticsID
+- fbAppID
+- twitterSite
+- twitterCreator
 ## Language
 
 File: `[PROJECT_DIR]\src\config\locales.json`
+## Indexing
+File: `[PROJECT_DIR]\static\robots.txt`
+By default indexing is prohibited.
+```
+User-agent: *
+Disallow: /
 
+sitemap: https://tarutino-steppe.netlify.app/sitemap.xml
+```
+if you want your site to be indexed by **Google** edit it:
+```
+User-agent: *
+Disallow:
+
+sitemap: https://your-actual-site-address/sitemap.xml
+```
 ### Development Mode
 
 Program uses the `LOCALES` entry in file `[PROJECT_DIR]\.env.development`.
