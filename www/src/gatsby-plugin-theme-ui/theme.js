@@ -106,6 +106,7 @@ const theme = {
   },
   // buttons,
   transition,
+  shadows,
 };
 
 export default theme;

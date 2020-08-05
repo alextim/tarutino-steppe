@@ -236,7 +236,7 @@ If no `default = true` found the first entry will be default locale.
 File: [PROJECT_DIR]\src\components\pages\contact\ContactForm.jsx
 
 ```js
-const AUTOCLOSE_DELAY = 5000; // 5 secs
+const AUTOCLOSE_DELAY = 5000; // in millisecs
 ```
 
 ### Site URL

@@ -49,7 +49,7 @@ const styleCloseButton = {
     left: '1rem',
     height: '1.5rem',
     width: '2px',
-    backgroundColor: '#333',
+    backgroundColor: 'modal.text',
   },
 
   '&::before': {
@@ -82,8 +82,9 @@ export const styleModalContent = {
   maxWidth: '26rem',
   top: 0,
   margin: '3.75rem auto',
-  backgroundColor: 'rgb(255, 255, 255)',
-  boxShadow: 'rgba(0, 0, 0, 0.1) 0 7px 14px 0, rgba(0, 0, 0, 0.07) 0 3px 6px 0',
+  color: 'modal.text',
+  backgroundColor: 'modal.bg',
+  boxShadow: (t) => t.shadows.dialog,
   outline: 0,
   zIndex: 1400,
 };

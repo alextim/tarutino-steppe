@@ -40,11 +40,14 @@ export const brand = {
   secondDark: cardinal90,
 };
 
+const text = grey90;
+const background = white;
+
 const colors = {
   white,
   black,
-  text: grey90,
-  background: white,
+  text,
+  background,
   primary: brand.secondLight,
   secondary: nickel,
   muted: lightGray,
@@ -62,8 +65,8 @@ const colors = {
   },
 
   header: {
-    text: grey90,
-    bg: white,
+    text,
+    bg: background,
     nav: {
       socialLink: grey20,
       item: {
@@ -79,6 +82,7 @@ const colors = {
       },
     },
   },
+
   footer: {
     text: lightWhite,
     bg: nickel,
@@ -106,6 +110,11 @@ const colors = {
     secondaryBorder: nickel,
   },
 
+  modal: {
+    text,
+    bg: background,
+  },
+
   modes: {
     dark: {
       text: lightWhite,
@@ -116,6 +125,7 @@ const colors = {
       highlight: brand.secondLight,
       heading: white,
       error: red,
+
       header: {
         text: lightWhite,
         bg: black,
@@ -131,6 +141,7 @@ const colors = {
           },
         },
       },
+
       footer: {
         text: lightWhite,
         bg: black,
@@ -143,6 +154,11 @@ const colors = {
             bg: black,
           },
         },
+      },
+
+      modal: {
+        text: lightWhite,
+        bg: black,
       },
     },
   },
