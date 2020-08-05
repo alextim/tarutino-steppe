@@ -15,7 +15,7 @@ import { InputControl, TextAreaControl, HoneyPotInput } from '../form-controls';
 
 import ModalContentBase from './ModalContentBase';
 
-const AUTOCLOSE_DELAY = 500000; // in milliseconds
+const AUTOCLOSE_DELAY = 5000; // in milliseconds
 /*
 let timer;
 const timeout = (ms) =>
