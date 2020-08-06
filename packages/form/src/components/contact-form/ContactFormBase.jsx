@@ -9,8 +9,9 @@ import {
 } from '@ait/contact-form-validators';
 
 import useForm from '../../hooks/useForm';
-import useModal from '../Modal/useModal';
+import sendData from '../../services/send-data';
 
+import useModal from '../Modal/useModal';
 import { InputControl, TextAreaControl, HoneyPotInput } from '../form-controls';
 
 import ModalContentBase from './ModalContentBase';
@@ -30,7 +31,7 @@ async function sendDataMock() {
 }
 */
 
-const ContactFormBase = ({ content, modalContent, actionControl, sendData, getErrorMessage }) => {
+const ContactFormBase = ({ content, modalContent, actionControl, endPoint, getErrorMessage }) => {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(true);
 
@@ -96,7 +97,7 @@ const ContactFormBase = ({ content, modalContent, actionControl, sendData, getEr
     try {
       openModal();
       // await sendDataMock();
-      return await sendData(values);
+      return await sendData(values, endPoint);
     } catch (err) {
       // clearTimeout(timer);
       setError(getErrorMessage(err.message));

@@ -1,15 +1,14 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
 import { graphql } from 'gatsby';
-import SEO from '../components/SEO';
+import { Section } from '@ait/common-ui';
 
 import 'lazysizes';
 // import a plugin
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
+import SEO from '../components/SEO';
 import Layout from '../components/Layout';
-
-import Section from '../components/Section';
 import LightboxGallery from '../components/LightboxGallery';
 
 const GalleryTemplate = ({ path, data, pageContext: { locale } }) => {

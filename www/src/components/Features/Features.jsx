@@ -3,9 +3,10 @@
 import { jsx } from 'theme-ui';
 import Img from 'gatsby-image';
 
+import { Section } from '@ait/common-ui';
+
 import makeImagePopupTitle from '../../helpers/makeImagePopupTitle';
 import useAuthorPrefix from '../../hooks/useAuthorPrefix';
-import Section from '../Section';
 
 const Features = ({ data, gray, imageStyle }) => {
   const authorPrefix = useAuthorPrefix();

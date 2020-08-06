@@ -8,3 +8,4 @@ export { default as Spinner } from './src/components/Spinner';
 export { default as DarkModeToggle } from './src/components/DarkModeToggle';
 export { default as Hamburger } from './src/components/Hamburger';
 export { default as ButtonBase } from './src/components/ButtonBase';
+export { default as Section } from './src/components/Section';

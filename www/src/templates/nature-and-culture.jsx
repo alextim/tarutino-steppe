@@ -1,11 +1,10 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
 import { graphql } from 'gatsby';
+import { Section } from '@ait/common-ui';
+
 import SEO from '../components/SEO';
-
 import Layout from '../components/Layout';
-
-import Section from '../components/Section';
 import SectionHalfContent from '../components/SectionHalfContent';
 
 const NatureAndCultureTemplate = ({ path, data, pageContext: { locale } }) => {

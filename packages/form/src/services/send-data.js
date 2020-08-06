@@ -1,8 +1,4 @@
-const END_POINT = '/.netlify/functions/contact';
-// const END_POINT = 'https://us-central1-contact-form-test-ab6ae.cloudfunctions.net/contact';
-
-const sendData = async (data) => {
-  const endpoint = END_POINT;
+const sendData = async (data, endPoint) => {
   const params = {
     method: 'POST', // *GET, POST, PUT, DELETE, etc.
     mode: 'cors', // no-cors, *cors, same-origin
@@ -16,13 +12,11 @@ const sendData = async (data) => {
     body: JSON.stringify(data), // body data type must match "Content-Type" header
   };
 
-  const res = await fetch(endpoint, params);
+  const res = await fetch(endPoint, params);
   if (res.ok && res.status < 300) {
     // console.warn('Success');
     return true;
   }
-
-  console.warn(res);
 
   const text = await res.text();
   console.error(text);

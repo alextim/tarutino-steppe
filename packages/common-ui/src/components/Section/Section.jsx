@@ -2,7 +2,8 @@
 /** @jsx jsx */
 import React from 'react';
 import { jsx, Heading } from 'theme-ui';
-import { Container } from '@ait/common-ui';
+
+import Container from '../Container';
 
 const styleSection = {
   backgroundPosition: '50%',

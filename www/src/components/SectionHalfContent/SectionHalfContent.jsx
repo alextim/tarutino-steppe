@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 
-import Section from '../Section';
+import { Section } from '@ait/common-ui';
+
 import HalfContent from '../HalfContent';
 
 const SectionHalfContent = ({ data = {}, noContainer = true, gray = false, left = false }) => {

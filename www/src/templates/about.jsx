@@ -1,11 +1,10 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
 import { graphql } from 'gatsby';
+import { Section } from '@ait/common-ui';
+
 import SEO from '../components/SEO';
-
 import { BaseLayout as Layout } from '../components/Layout';
-
-import Section from '../components/Section';
 import HalfContent from '../components/HalfContent';
 import SectionHalfContent from '../components/SectionHalfContent';
 

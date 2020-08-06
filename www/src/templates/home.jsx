@@ -2,11 +2,10 @@
 /** @jsx jsx */
 import { graphql } from 'gatsby';
 import { jsx } from 'theme-ui';
+import { Section } from '@ait/common-ui';
+
 import SEO from '../components/SEO';
-
 import { BaseLayout as Layout } from '../components/Layout';
-
-import Section from '../components/Section';
 import Features from '../components/Features';
 
 const HomeTemplate = ({ path, data, pageContext: { locale } }) => {

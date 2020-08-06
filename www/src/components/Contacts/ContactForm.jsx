@@ -14,7 +14,9 @@ import { Spinner } from '@ait/common-ui';
 import { useTranslation } from '../../i18n';
 
 import Button from '../Button';
-import sendData from '../../services/sendData';
+
+const END_POINT = '/.netlify/functions/contact';
+// const END_POINT = 'https://us-central1-contact-form-test-ab6ae.cloudfunctions.net/contact';
 
 const ContactForm = () => {
   const { t } = useTranslation();
@@ -119,7 +121,7 @@ const ContactForm = () => {
       content={content}
       modalContent={modalContent}
       actionControl={<Button type="submit">{t('form.send')}</Button>}
-      sendData={sendData}
+      endPoint={END_POINT}
       getErrorMessage={getErrorTranslation}
     />
   );
