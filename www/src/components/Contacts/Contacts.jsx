@@ -1,18 +1,18 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import { useTranslation } from '../../../i18n';
+import { useTranslation } from '../../i18n';
 
 import ContactForm from './ContactForm';
 
-import useOrganization from '../../../hooks/useOrganization';
+import useOrganization from '../../hooks/useOrganization';
 
-import OrganizationPostalAddress from '../../organization/OrganizationPostalAddress';
-import OrganizationPhones from '../../organization/OrganizationPhones';
-import OrganizationEmail from '../../organization/OrganizationEmail';
-// import OrganizationSite from '../../organization/OrganizationSite';
-// import OrganizationCloudPhones from '../../organization/OrganizationCloudPhones';
-import OrganizationOpeningHours from '../../organization/OrganizationOpeningHours';
+import OrganizationPostalAddress from '../organization/OrganizationPostalAddress';
+import OrganizationPhones from '../organization/OrganizationPhones';
+import OrganizationEmail from '../organization/OrganizationEmail';
+// import OrganizationSite from '../organization/OrganizationSite';
+// import OrganizationCloudPhones from '../organization/OrganizationCloudPhones';
+import OrganizationOpeningHours from '../organization/OrganizationOpeningHours';
 
 const CardsWrapper = styled.div`
   display: flex;
@@ -70,7 +70,7 @@ const ContactFormWrapper = styled.div`
     );
 `;
 
-const Contact = () => {
+const Contacts = () => {
   const { t } = useTranslation();
   const { email, phone, openingHours } = useOrganization();
 
@@ -110,4 +110,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Contacts;

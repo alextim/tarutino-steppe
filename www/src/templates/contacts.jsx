@@ -5,7 +5,7 @@ import { graphql } from 'gatsby';
 import SEO from '../components/SEO';
 
 import Layout from '../components/Layout';
-import Contacts from '../components/pages/contacts';
+import Contacts from '../components/Contacts';
 
 const mapSrc =
   'https://maps.google.com/maps?q=Tarutynsʹkyy+Step&t=&z=13&ie=UTF8&iwloc=&output=embed';

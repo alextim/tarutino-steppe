@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx, Heading } from 'theme-ui';
+import { BgImage } from '@ait/common-ui';
 
 import mq from '../../gatsby-plugin-theme-ui/media-queries';
-import BgImage from '../BgImage';
 
 const styleTitle = {
   fontSize: '2rem',

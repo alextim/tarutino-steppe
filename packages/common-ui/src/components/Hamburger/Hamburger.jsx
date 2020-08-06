@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import mq from '../../gatsby-plugin-theme-ui/media-queries';
 
 const Wrap = styled.div`
   height: ${(p) => p.w}rem;
@@ -8,7 +7,7 @@ const Wrap = styled.div`
   margin: 0 0.5rem 0 -0.5rem;
   cursor: pointer;
 
-  ${mq.lg} {
+  ${(p) => p.theme.mediaQueries.lg} {
     display: none;
     pointer-events: none;
   }

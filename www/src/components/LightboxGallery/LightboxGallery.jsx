@@ -4,9 +4,9 @@ import { jsx } from 'theme-ui';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 
-import Gallery from '../../Gallery';
-import useAuthorPrefix from '../../../hooks/useAuthorPrefix';
-import makeImagePopupTitle from '../../../helpers/makeImagePopupTitle';
+import Gallery from '../Gallery';
+import useAuthorPrefix from '../../hooks/useAuthorPrefix';
+import makeImagePopupTitle from '../../helpers/makeImagePopupTitle';
 
 const PageGallery = ({ items }) => {
   const [openLightbox, setOpenLightbox] = useState(false);

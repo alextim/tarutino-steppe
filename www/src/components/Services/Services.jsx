@@ -5,9 +5,9 @@ import React from 'react';
 import { jsx, Heading } from 'theme-ui';
 import Img from 'gatsby-image';
 
-import useAuthorPrefix from '../../../hooks/useAuthorPrefix';
-import makeImagePopupTitle from '../../../helpers/makeImagePopupTitle';
-import mq from '../../../gatsby-plugin-theme-ui/media-queries';
+import useAuthorPrefix from '../../hooks/useAuthorPrefix';
+import makeImagePopupTitle from '../../helpers/makeImagePopupTitle';
+import mq from '../../gatsby-plugin-theme-ui/media-queries';
 
 const styleWrapper = {
   display: 'flex',

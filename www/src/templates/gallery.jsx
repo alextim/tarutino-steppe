@@ -10,7 +10,7 @@ import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import Layout from '../components/Layout';
 
 import Section from '../components/Section';
-import PageGallery from '../components/pages/gallery';
+import LightboxGallery from '../components/LightboxGallery';
 
 const GalleryTemplate = ({ path, data, pageContext: { locale } }) => {
   const { translations, address, mainNav, footerNav, socialLinks } = data;
@@ -25,7 +25,7 @@ const GalleryTemplate = ({ path, data, pageContext: { locale } }) => {
     >
       <SEO locale={locale} title={metaTitle} description={metaDescription} pathname={path} />
       <Section text={sections[0].text} small />
-      <PageGallery items={sections[1].items} />
+      <LightboxGallery items={sections[1].items} />
       {html && <div dangerouslySetInnerHTML={{ __html: html }} />}
     </Layout>
   );

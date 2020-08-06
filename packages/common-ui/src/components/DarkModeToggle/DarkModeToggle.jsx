@@ -2,8 +2,6 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { useColorMode } from 'theme-ui';
 
-import { mediaQueries } from '../../gatsby-plugin-theme-ui';
-
 // kudos to our friends at narative.co
 // https://github.com/narative/gatsby-theme-novela/blob/fb38329e17595df6e846be1d33517ff6125cde4e/src/components/Navigation/Navigation.Header.tsx
 // and Aaron Iker
@@ -109,7 +107,7 @@ const MoonOrSun = styled.div`
     transform: scale(${(p) => (p.isDark ? 1 : 0)});
     transition: all 0.35s ease;
 
-    ${mediaQueries.md} {
+    ${(p) => p.theme.mediaQueries.md} {
       transform: scale(${(p) => (p.isDark ? 0.92 : 0)});
     }
   }

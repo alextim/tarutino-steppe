@@ -9,12 +9,12 @@ import {
   MESSAGE_MAX_LENGTH,
 } from '@ait/contact-form-validators';
 import { ContactFormBase } from '@ait/form';
+import { Spinner } from '@ait/common-ui';
 
-import { useTranslation } from '../../../i18n';
+import { useTranslation } from '../../i18n';
 
-import Spinner from '../../Spinner';
-import Button from '../../Button';
-import sendData from '../../../services/sendData';
+import Button from '../Button';
+import sendData from '../../services/sendData';
 
 const ContactForm = () => {
   const { t } = useTranslation();

@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
+import { Hamburger, DarkModeToggle } from '@ait/common-ui';
 
 import Logo from '../Logo/Logo';
-import Hamburger from '../Hamburger';
 import LanguageSwitch from '../LanguageSwitch';
-import DarkModeToggle from '../DarkModeToggle';
 import { Left, Right } from './styled';
 import Menu from './Menu';
 

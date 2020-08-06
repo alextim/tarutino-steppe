@@ -2,3 +2,9 @@ export { default as Container, ContainerFullWidth } from './src/components/Conta
 export { default as LegalInfo } from './src/components/LegalInfo';
 export { default as FooterNavigation } from './src/components/FooterNavigation';
 export { default as FooterWidget } from './src/components/FooterWidget';
+export { default as ArtImg } from './src/components/ArtImg';
+export { default as BgImage } from './src/components/BgImage';
+export { default as Spinner } from './src/components/Spinner';
+export { default as DarkModeToggle } from './src/components/DarkModeToggle';
+export { default as Hamburger } from './src/components/Hamburger';
+export { default as ButtonBase } from './src/components/ButtonBase';

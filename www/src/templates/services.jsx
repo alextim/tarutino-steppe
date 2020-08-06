@@ -7,7 +7,7 @@ import Layout from '../components/Layout';
 
 import SectionHalfContent from '../components/SectionHalfContent';
 import Section from '../components/Section';
-import Services from '../components/pages/services';
+import Services from '../components/Services';
 
 const ServicesTemplate = ({ path, data, pageContext: { locale } }) => {
   const { translations, address, mainNav, footerNav, socialLinks } = data;
