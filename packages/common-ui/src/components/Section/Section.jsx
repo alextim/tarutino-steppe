@@ -56,6 +56,7 @@ const Text = ({ title, subtitle, text }) => (
 );
 
 const Section = ({
+  id,
   noPadding,
   small,
   gray,
@@ -76,7 +77,7 @@ const Section = ({
   };
   if (noContainer) {
     return (
-      <section sx={sectionStyle}>
+      <section id={id} sx={sectionStyle}>
         {hasText && (
           <div sx={wrapStyle}>
             <Text title={title} subtitle={subtitle} text={text} />
@@ -87,7 +88,7 @@ const Section = ({
     );
   }
   return (
-    <section sx={sectionStyle}>
+    <section id={id} sx={sectionStyle}>
       {hasText && (
         <Container sx={wrapStyle}>
           <Text title={title} subtitle={subtitle} text={text} />

@@ -7,9 +7,7 @@ const ModalContentBase = ({ content, loading, cancel, error }) => {
     return (
       <>
         <ModalHeader>{content.loading.heading}</ModalHeader>
-        <ModalBody>
-          <p>{content.loading.body}</p>
-        </ModalBody>
+        <ModalBody>{content.loading.body}</ModalBody>
         <ModalFooter justify="center">{content.loading.action(cancel)}</ModalFooter>
       </>
     );

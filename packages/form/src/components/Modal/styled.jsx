@@ -105,8 +105,9 @@ export const ModalHeader = ({ children }) => (
 export const ModalBody = ({ children }) => (
   <div
     sx={{
+      position: 'relative',
       padding: '0.5rem 1.5rem 2.5rem',
-      flex: '1 1 0 %',
+      flex: '1 1 0%',
     }}
   >
     {children}

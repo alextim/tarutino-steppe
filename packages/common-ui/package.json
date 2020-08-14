@@ -12,10 +12,10 @@
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {
-    "@emotion/core": ">=10.0.28",
+    "@emotion/core": ">=10.0.34",
     "@emotion/styled": ">=10.0.27",
-    "gatsby": ">=2.24.33",
-    "gatsby-image": ">=2.4.14",
+    "gatsby": ">=2.24.47",
+    "gatsby-image": ">=2.4.16",
     "react": ">=16.13.1",
     "react-dom": ">=16.13.1",
     "theme-ui": ">=0.3.1"
@@ -24,7 +24,7 @@
     "lint": "eslint --fix src/**/*.{js,jsx,md}",
     "stylelint": "stylelint --syntax css-in-js src/**/*.{js,jsx,ts,tsx,css,scss}",
     "format": "prettier-eslint --write 'src/**/*.{js,jsx,json,md}'",
-    "ncu": "ncu -u"
+    "ncu": "ncu -u --timeout 60000"
   },
   "repository": "https://github.com/alextim/kat-2"
 }

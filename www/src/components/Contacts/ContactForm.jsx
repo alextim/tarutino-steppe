@@ -1,4 +1,7 @@
+/** @jsx jsx */
 import React from 'react';
+import { jsx, Spinner } from 'theme-ui';
+
 import {
   EMAIL_FIELD,
   NAME_MIN_LENGTH,
@@ -9,14 +12,12 @@ import {
   MESSAGE_MAX_LENGTH,
 } from '@ait/contact-form-validators';
 import { ContactFormBase } from '@ait/form';
-import { Spinner } from '@ait/common-ui';
 
 import { useTranslation } from '../../i18n';
 
 import Button from '../Button';
 
 const END_POINT = '/.netlify/functions/contact';
-// const END_POINT = 'https://us-central1-contact-form-test-ab6ae.cloudfunctions.net/contact';
 
 const ContactForm = () => {
   const { t } = useTranslation();
@@ -82,36 +83,48 @@ const ContactForm = () => {
     error: {
       heading: t('form.error'),
       body: (error) => (
-        <>
+        <React.Fragment>
           <b>{error}</b>
           <p>
             {t('cf.sorry')}
             <br />
             {t('cf.try_later')}
           </p>
-        </>
+        </React.Fragment>
       ),
     },
+
     loading: {
       heading: t('form.sending'),
-      body: t('form.pls_wait'),
+      body: (
+        <div
+          sx={{
+            width: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <div>{t('form.pls_wait')}</div>
+          <Spinner sx={{ display: 'block', mt: 7 }} />
+        </div>
+      ),
       action: (closeModal) => (
-        <>
-          <Spinner w={2} />
-          <Button onClick={closeModal} primary>
-            {t('form.cancel')}
-          </Button>
-        </>
+        <Button onClick={closeModal} primary>
+          {t('form.cancel')}
+        </Button>
       ),
     },
+
     success: {
       heading: t('form.success'),
       body: (
-        <>
+        <React.Fragment>
           {' '}
           <p>{t('cf.thanks')}</p>
           <p>{t('cf.we_will_response')}</p>
-        </>
+        </React.Fragment>
       ),
     },
   };

@@ -284,11 +284,11 @@ social-links.uk.yaml
 File content sample:
 ```yaml
 - code: facebook
-  url:  https://www.facebook.com/your-facebook-address
-  text: Follow us on Facebook
+  to:  https://www.facebook.com/your-facebook-address
+  title: Follow us on Facebook
 - code: instagram
-  url:  https://www.instagram.com/your-facebook-address
-  text: Follow us on Instagram
+  to:  https://www.instagram.com/your-facebook-address
+  title: Follow us on Instagram
 ```
 ## Pages
 

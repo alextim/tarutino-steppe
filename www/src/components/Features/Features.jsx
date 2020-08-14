@@ -8,23 +8,26 @@ import { Section } from '@ait/common-ui';
 import makeImagePopupTitle from '../../helpers/makeImagePopupTitle';
 import useAuthorPrefix from '../../hooks/useAuthorPrefix';
 
+const innerWrapperStyle = {
+  display: 'flex',
+  // alignItems: 'center',
+  justifyContent: 'center',
+  flexWrap: 'wrap',
+  textAlign: 'center',
+};
+
+const itemWrapperStyle = { width: ['100%', '100%', '33.33%'], px: 4, mb: [8, 8, 0] };
+const textWrapperStyle = { mt: 3 };
+
 const Features = ({ data, gray, imageStyle }) => {
   const authorPrefix = useAuthorPrefix();
   const { title, subtitle, items } = data;
 
   return (
     <Section title={title} subtitle={subtitle} gray={gray} noContainer={false}>
-      <div
-        sx={{
-          display: 'flex',
-          // alignItems: 'center',
-          justifyContent: 'center',
-          flexWrap: 'wrap',
-          textAlign: 'center',
-        }}
-      >
+      <div sx={innerWrapperStyle}>
         {items.map(({ text, image }, i) => (
-          <div key={i} sx={{ width: ['100%', '100%', '33.33%'], px: 4, mb: [8, 8, 0] }}>
+          <div key={i} sx={itemWrapperStyle}>
             {image.src && (
               <Img
                 fluid={image.src.childImageSharp.fluid}
@@ -33,7 +36,7 @@ const Features = ({ data, gray, imageStyle }) => {
                 sx={imageStyle}
               />
             )}
-            <div sx={{ mt: 3 }}>{text}</div>
+            <div sx={textWrapperStyle}>{text}</div>
           </div>
         ))}
       </div>

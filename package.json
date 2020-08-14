@@ -6,10 +6,13 @@
   "license": "MIT",
   "scripts": {
     "build": "yarn workspace www build",
-    "develop": "yarn workspace www develop",
+    "dev": "yarn workspace www develop",
+    "dev:1": "yarn workspace one-page develop",
     "clean": "yarn workspace www clean",
+    "clean:1": "yarn workspace one-page clean",
     "serve": "yarn workspace www serve",
     "lint": "eslint --fix www/src/**/*.{js,jsx,md}",
+    "lint:1": "eslint --fix one-page/src/**/*.{js,jsx,md}",
     "lint:all": "yarn workspaces run lint",
     "stylelint": "yarn workspace www stylelint",
     "format": "yarn workspace www format",
@@ -25,7 +28,8 @@
     "packages": [
       "packages/*",
       "functions",
-      "www"
+      "www",
+      "one-page"
     ]
   },
   "husky": {
@@ -50,11 +54,11 @@
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.5",
+    "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.0.8",
-    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.11",
+    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.12",
     "husky": "^4.2.5",
-    "jest": "^26.2.2",
+    "jest": "^26.4.0",
     "license-checker": "^25.0.1",
     "lint-staged": "^10.2.11",
     "netlify-lambda": "^2.0.1",

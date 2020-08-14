@@ -5,8 +5,8 @@ const useSocialLinks = () => {
   if (!socialLinks.edges.length) {
     return undefined;
   }
-  return socialLinks.edges.reduce((acc, { node: { code, url, text } }) => {
-    acc[code] = { url, text };
+  return socialLinks.edges.reduce((acc, { node: { code, to, title } }) => {
+    acc[code] = { to, title };
     return acc;
   }, {});
 };

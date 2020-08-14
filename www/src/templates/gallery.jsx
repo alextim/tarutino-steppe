@@ -88,8 +88,8 @@ export const pageQuery = graphql`
       edges {
         node {
           code
-          url
-          text
+          to
+          title
         }
       }
     }

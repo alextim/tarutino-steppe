@@ -12,35 +12,36 @@ const styleSpacer = {
 
 const style = { pl: '0.4em' };
 
-const IconLink = ({ children, to, icon, title, obfuscate, extraStyle, ...props }) => {
-  let extra;
-  if (obfuscate) {
-    if (to.includes('mailto:')) {
-      extra = { email: to.replace('mailto:', '') };
-    }
-  }
+const IconLink = ({ children, to, icon, title, extraStyle, ...props }) => {
   return (
     <div
       sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', ...(extraStyle || {}) }}
       title={title}
     >
-      {icon && <Icon iconName={icon} />}
-      {!icon && <div sx={styleSpacer} />}
-      {to &&
-        (extra ? (
-          <Obfuscate sx={style} {...{ ...props, ...extra }}>
-            {children}
-          </Obfuscate>
-        ) : (
-          <a sx={style} href={to} {...props}>
-            {children}
-          </a>
-        ))}
-      {!to && (
+      {icon ? <Icon iconName={icon} /> : <div sx={styleSpacer} />}
+      {to ? (
+        <a sx={style} href={to} {...props}>
+          {children}
+        </a>
+      ) : (
         <span sx={style} {...props}>
           {children}
         </span>
       )}
+    </div>
+  );
+};
+
+export const ObfuscatedIconLink = ({ children, icon, title, extraStyle, ...props }) => {
+  return (
+    <div
+      sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', ...(extraStyle || {}) }}
+      title={title}
+    >
+      {icon ? <Icon iconName={icon} /> : <div sx={styleSpacer} />}
+      <Obfuscate sx={style} {...props}>
+        {children}
+      </Obfuscate>
     </div>
   );
 };

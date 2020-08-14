@@ -1,23 +1,16 @@
-/* eslint-disable react/no-array-index-key */
 import React from 'react';
 
-import IconLink from '../IconLink';
+import { ObfuscatedIconLink as IconLink } from '../IconLink';
 import extraPadding from './extraPadding';
 
-const OrganizationEmail = ({ email }) => {
-  return (
-    <>
-      {email.map((item, i) => (
-        <IconLink
-          key={i}
-          obfuscate
-          icon="envelope"
-          extraStyle={extraPadding}
-          to={`mailto:${item}`}
-        />
-      ))}
-    </>
-  );
-};
+const OrganizationEmail = ({ emails }) =>
+  emails.map((email, i) => (
+    <IconLink
+      key={email}
+      icon={i === 0 ? 'envelope' : ''}
+      extraStyle={extraPadding}
+      email={email}
+    />
+  ));
 
 export default OrganizationEmail;

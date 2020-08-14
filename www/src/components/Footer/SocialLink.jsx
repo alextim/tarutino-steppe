@@ -22,8 +22,8 @@ const style = {
   },
 };
 
-const SocialLink = ({ icon, name, text, url }) => (
-  <a sx={style} href={url} target="_blank" rel="noreferrer" aria-label={name} title={text}>
+const SocialLink = ({ icon, name, title, to }) => (
+  <a sx={style} href={to} target="_blank" rel="noreferrer" aria-label={name} title={title}>
     {icon}
   </a>
 );

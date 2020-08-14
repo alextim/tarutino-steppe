@@ -22,8 +22,8 @@ const SocialLinks = ({ items }) => (
         key={key}
         icon={<Icon iconName={key} />}
         name={Utils.upperFirst(key)}
-        url={items[key].url}
-        text={items[key].text}
+        to={items[key].to}
+        title={items[key].title}
       />
     ))}
   </div>

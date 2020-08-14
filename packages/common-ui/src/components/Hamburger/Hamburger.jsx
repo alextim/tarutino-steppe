@@ -1,65 +1,70 @@
-import React from 'react';
-import styled from '@emotion/styled';
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
 
-const Wrap = styled.div`
-  height: ${(p) => p.w}rem;
-  width: ${(p) => p.w}rem;
-  margin: 0 0.5rem 0 -0.5rem;
-  cursor: pointer;
+const Hamburger = ({ w = 2.5, open, bp, onClick }) => {
+  const wrapStyle = {
+    height: `${w}rem`,
+    width: `${w}rem`,
+    m: '0 0.5rem 0 -0.5rem',
+    cursor: 'pointer',
 
-  ${(p) => p.theme.mediaQueries.lg} {
-    display: none;
-    pointer-events: none;
-  }
-`;
+    [bp]: {
+      display: 'none',
+      pointerEnts: 'none',
+    },
+  };
 
-const InnerWrap = styled.div`
-  position: relative;
-  top: 0;
-  height: 1.3rem;
-  width: 1.9rem;
-  margin-top: 1.2rem;
-  margin-left: 0.6rem;
-  cursor: pointer;
-  transform: rotate(0deg);
-  transition: 0.5s ease-in-out;
+  const innerWrapStyle = {
+    position: 'relative',
+    top: 0,
+    height: '1.3rem',
+    width: '1.9rem',
+    mt: '1.2rem',
+    ml: '0.6rem',
+    cursor: 'pointer',
+    transform: 'rotate(0deg)',
+    transition: '0.5s ease-in-out',
+  };
 
-  span,
-  span::before,
-  span::after {
-    border-radius: 1px;
-    height: 0.125rem;
-    width: 1.25rem;
-    position: absolute;
-    display: block;
-    content: '';
-    transition: all 300ms ease-in-out;
-    background-color: ${(p) => p.theme.colors.text};
-  }
+  const commonSpanStyle = {
+    content: '""',
+    display: 'block',
+    position: 'absolute',
+    height: '0.125rem',
+    width: '1.25rem',
+    bg: 'text',
+    borderRadius: '1px',
+    transition: 'all 300ms ease-in-out',
+  };
 
-  span {
-    background-color: ${(p) => (p.open ? 'transparent' : p.theme.colors.text)};
+  const spanStyle = {
+    ...commonSpanStyle,
+    bg: open ? 'transparent' : 'text',
 
-    &::before {
-      top: ${(p) => (p.open ? 0 : '-0.625rem')};
-      transform: ${(p) => (p.open ? 'rotate(45deg)' : 'none')};
-    }
+    '&::before, &::after': {
+      ...commonSpanStyle,
+    },
 
-    &::after {
-      top: ${(p) => (p.open ? 0 : '0.625rem')};
-      bottom: -0.625rem;
-      transform: ${(p) => (p.open ? 'rotate(-45deg)' : 'none')};
-    }
-  }
-`;
+    '&::before': {
+      top: open ? 0 : '-0.625rem',
+      transform: open ? 'rotate(45deg)' : 'none',
+    },
 
-const Hamburger = ({ w = 2.5, open, onClick }) => {
+    '&::after': {
+      top: open ? 0 : '0.625rem',
+      bottom: '-0.625rem',
+      transform: open ? 'rotate(-45deg)' : 'none',
+    },
+  };
+
   return (
-    <Wrap type="button" w={w} aria-label="Close" onClick={onClick}>
-      <InnerWrap open={open}>
-        <span />
-      </InnerWrap>
-    </Wrap>
+    <div sx={wrapStyle} type="button" aria-label="Close" onClick={onClick}>
+      <div sx={innerWrapStyle}>
+        <span sx={spanStyle} />
+      </div>
+    </div>
   );
 };
 

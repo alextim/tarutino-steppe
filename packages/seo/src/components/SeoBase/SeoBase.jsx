@@ -71,7 +71,7 @@ const SeoBase = ({
     schemaOrg.telephone = phone.join();
   }
   if (socialLinks) {
-    schemaOrg.sameAs = Object.keys(socialLinks).map((key) => socialLinks[key].url);
+    schemaOrg.sameAs = Object.keys(socialLinks).map((key) => socialLinks[key].to);
   }
   if (Array.isArray(openingHours) && dows) {
     schemaOrg.openingHours = openingHours.reduce(
@@ -150,7 +150,7 @@ const SeoBase = ({
             <meta key={code} property="og:locale:alternate" content={i18n.locales[code].ogLocale} />
           ))}
       {socialLinks && socialLinks.facebook && (
-        <meta property="og:site_name" content={socialLinks.facebook.url} />
+        <meta property="og:site_name" content={socialLinks.facebook.to} />
       )}
       <meta property="og:url" content={URL} />
       <meta property="og:type" content={article ? 'article' : 'website'} />
@@ -162,7 +162,7 @@ const SeoBase = ({
       <meta property="og:image:height" content={ogImage.height} />
       {socialLinks &&
         Object.keys(socialLinks).map((key) => (
-          <meta key={key} property="og:see_also" content={socialLinks[key].url} />
+          <meta key={key} property="og:see_also" content={socialLinks[key].to} />
         ))}
 
       <meta name="twitter:card" content="summary_large_image" />

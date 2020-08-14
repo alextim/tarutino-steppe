@@ -94,7 +94,7 @@ const Footer = () => {
         <WidgetWrapper extraStyle={styleWidgetAddr2}>
           <FooterWidget title={t('footer.call_us')}>
             <OrganizationPhones phones={phone} />
-            <OrganizationEmail email={email} />
+            <OrganizationEmail emails={email} />
             {/*
             <OrganizationSite />
             <OrganizationCloudPhones voice={voice} />

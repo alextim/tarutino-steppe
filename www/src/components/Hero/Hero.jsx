@@ -18,6 +18,22 @@ const styleSubtitle = {
   },
 };
 
+const innerWrapperStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  color: 'white',
+  height: '100%',
+  px: 6,
+  textTransform: 'uppercase',
+  textShadow: '1px 1px 6px rgba(0, 0, 0, 0.7)',
+  textAlign: 'center',
+  [mq.md]: {
+    lineHeight: 1.25,
+  },
+};
+
 const Hero = ({ title, subtitle, img, alt, imgTitle }) => {
   if (!img) {
     return (
@@ -30,23 +46,7 @@ const Hero = ({ title, subtitle, img, alt, imgTitle }) => {
   //  overlayColor="#04040454"
   return (
     <BgImage alt={alt} title={imgTitle} fluid={img}>
-      <div
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          color: 'white',
-          height: '100%',
-          px: 6,
-          textTransform: 'uppercase',
-          textShadow: '1px 1px 6px rgba(0, 0, 0, 0.7)',
-          textAlign: 'center',
-          [mq.md]: {
-            lineHeight: 1.25,
-          },
-        }}
-      >
+      <div sx={innerWrapperStyle}>
         {title && (
           <Heading as="h1" sx={styleTitle}>
             {title}

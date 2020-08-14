@@ -1,6 +1,8 @@
+/** @jsx jsx */
 import React from 'react';
-import styled from '@emotion/styled';
+import { jsx } from 'theme-ui';
 
+import mq from '../../gatsby-plugin-theme-ui/media-queries';
 import { useTranslation } from '../../i18n';
 
 import ContactForm from './ContactForm';
@@ -14,49 +16,50 @@ import OrganizationEmail from '../organization/OrganizationEmail';
 // import OrganizationCloudPhones from '../organization/OrganizationCloudPhones';
 import OrganizationOpeningHours from '../organization/OrganizationOpeningHours';
 
-const CardsWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin-top: 1rem;
-`;
+const cardsWrapperStyle = {
+  display: 'flex',
+  flexWrap: 'wrap',
+  justifyContent: 'space-around',
+  mt: '1rem',
+};
 
-const CardHeading = styled.h3`
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-`;
+const cardHeadingStyle = {
+  fontSize: '1.25rem',
+  mb: '0.5rem',
+};
 
-const Wrapper = styled.div`
-  width: 100%;
-  padding: 0 1rem 2rem 1rem;
-`;
+const wrapperStyle = {
+  width: '100%',
+  p: '0 1rem 2rem 1rem',
+};
 
-const CardWrapper = styled(Wrapper)`
-  line-height: 1.75;
+const cardWrapperStyle = {
+  ...wrapperStyle,
+  lineHeight: 1.75,
 
-  a:hover {
-    color: ${(p) => p.theme.colors.highlight};
-  }
+  'a:hover': {
+    color: (t) => t.colors.highlight,
+  },
 
-  ${(p) => p.theme.mediaQueries.lg} {
-    width: auto;
-  }
-`;
+  [mq.lg]: {
+    width: 'auto',
+  },
+};
 
 const Card = ({ title, children }) => (
-  <CardWrapper>
-    <CardHeading>{title}</CardHeading>
+  <div sx={cardWrapperStyle}>
+    <h3 sx={cardHeadingStyle}>{title}</h3>
     {children}
-  </CardWrapper>
+  </div>
 );
 
-const ContactFormWrapper = styled.div`
-  width: 100%;
-  margin: 1.25rem 0;
-  padding: 2rem;
-  border-top: 8px solid transparent;
-  box-shadow: 0 5px 13px rgba(0, 0, 0, 0.17);
-  border-image: 16
+const contactFormWrapperStyle = {
+  width: '100%',
+  margin: '1.25rem 0',
+  padding: '2rem',
+  borderTop: '8px solid transparent',
+  boxShadow: '0 5px 13px rgba(0, 0, 0, 0.17)',
+  borderImage: `16
     repeating-linear-gradient(
       -45deg,
       red,
@@ -67,16 +70,16 @@ const ContactFormWrapper = styled.div`
       #58a 3rem,
       transparent 0,
       transparent 4rem
-    );
-`;
+    )`,
+};
 
 const Contacts = () => {
   const { t } = useTranslation();
   const { email, phone, openingHours } = useOrganization();
 
   return (
-    <>
-      <CardsWrapper>
+    <React.Fragment>
+      <div sx={cardsWrapperStyle}>
         <Card title={t('contacts.wait_you_on_address')}>
           <OrganizationPostalAddress />
         </Card>
@@ -89,7 +92,7 @@ const Contacts = () => {
 
         <Card title={t('contacts.call_us')}>
           <OrganizationPhones phones={phone} />
-          <OrganizationEmail email={email} />
+          <OrganizationEmail emails={email} />
           {/* <OrganizationSite /> */}
         </Card>
 
@@ -98,15 +101,15 @@ const Contacts = () => {
           <OrganizationCloudPhones voice={voice} />
         </Card>
         */}
-      </CardsWrapper>
+      </div>
 
-      <Wrapper>
-        <CardHeading>{t('contacts.write_us')}</CardHeading>
-        <ContactFormWrapper>
+      <div sx={wrapperStyle}>
+        <h3 sx={cardHeadingStyle}>{t('contacts.write_us')}</h3>
+        <div sx={contactFormWrapperStyle}>
           <ContactForm />
-        </ContactFormWrapper>
-      </Wrapper>
-    </>
+        </div>
+      </div>
+    </React.Fragment>
   );
 };
 

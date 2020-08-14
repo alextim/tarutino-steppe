@@ -64,30 +64,24 @@ const yamlFields = {
 
 const navItem = {
   to: {
-    type: 'String',
+    type: 'String!',
   },
   title: {
-    type: 'String',
+    type: 'String!',
   },
 };
 const translationItem = {
   key: {
-    type: 'String',
+    type: 'String!',
   },
   value: {
-    type: 'String',
+    type: 'String!',
   },
 };
 
 const socialLinkItem = {
   code: {
-    type: 'String',
-  },
-  url: {
-    type: 'String',
-  },
-  text: {
-    type: 'String',
+    type: 'String!',
   },
 };
 

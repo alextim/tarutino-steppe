@@ -7,8 +7,6 @@ import { Location } from '@reach/router';
 import mq from '../../../gatsby-plugin-theme-ui/media-queries';
 import sizes from '../../../gatsby-plugin-theme-ui/sizes';
 
-import useMainNavItems from '../../../hooks/useMainNavtems';
-
 import CTAButton from './CTAButton';
 import MenuItem from './MenuItem';
 
@@ -103,14 +101,12 @@ const stripLastSlashes = (path) => {
   return removeTrailingSlashes(path);
 };
 
-const Menu = ({ isMenuOpen, setIsMenuOpen }) => {
+const Menu = ({ navItems, isMenuOpen, setIsMenuOpen }) => {
   const onClick = () => {
     if (isMenuOpen) {
       setIsMenuOpen(false);
     }
   };
-
-  const navItems = useMainNavItems();
 
   return (
     <Location>
