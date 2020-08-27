@@ -1,9 +1,8 @@
-const footerNavItems = [
-  { to: '/', title: 'Home' },
-  { to: '/#about', title: 'About Me' },
-  { to: '/#experience', title: 'Experience' },
-  { to: '/#service', title: 'Service' },
-  { to: '/#contacts', title: 'Contacts' },
+const mainNavItems = [
+  { to: 'about', title: 'About Me' },
+  { to: 'experience', title: 'Experience' },
+  { to: 'service', title: 'Service' },
+  { to: 'contacts', title: 'Contacts' },
 ];
 
-export default footerNavItems;
+export default mainNavItems;

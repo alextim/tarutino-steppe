@@ -23,7 +23,45 @@ const HomePage = () => {
         in nulla bibendum, vel tincidunt justo accumsan. Pellentesque pellentesque ac nulla sit amet
         porttitor. Ut scelerisque sagittis tortor, eget sagittis neque rhoncus at. Morbi justo
         lorem, tincidunt a pellentesque et, scelerisque sit amet ex. Aliquam justo leo, pretium sed
-        nunc sit amet, feugiat sagittis diam.
+        nunc sit amet, feugiat sagittis diam. Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Duis quis nunc sit amet turpis facilisis ultrices nec vel diam. Nam sed lacinia nisi.
+        Mauris dapibus elit at risus efficitur, in gravida nisi consequat. Suspendisse varius congue
+        dignissim. Curabitur ac libero commodo, tristique nisl ac, posuere turpis. Phasellus mattis
+        dignissim eros sit amet elementum. In non leo in nisi convallis finibus nec vel dolor. Donec
+        tempus justo vel libero mollis tincidunt. In mattis neque eget erat vulputate tempus quis at
+        nibh. In ultrices dui in nulla bibendum, vel tincidunt justo accumsan. Pellentesque
+        pellentesque ac nulla sit amet porttitor. Ut scelerisque sagittis tortor, eget sagittis
+        neque rhoncus at. Morbi justo lorem, tincidunt a pellentesque et, scelerisque sit amet ex.
+        Aliquam justo leo, pretium sed nunc sit amet, feugiat sagittis diam. Lorem ipsum dolor sit
+        amet, consectetur adipiscing elit. Duis quis nunc sit amet turpis facilisis ultrices nec vel
+        diam. Nam sed lacinia nisi. Mauris dapibus elit at risus efficitur, in gravida nisi
+        consequat. Suspendisse varius congue dignissim. Curabitur ac libero commodo, tristique nisl
+        ac, posuere turpis. Phasellus mattis dignissim eros sit amet elementum. In non leo in nisi
+        convallis finibus nec vel dolor. Donec tempus justo vel libero mollis tincidunt. In mattis
+        neque eget erat vulputate tempus quis at nibh. In ultrices dui in nulla bibendum, vel
+        tincidunt justo accumsan. Pellentesque pellentesque ac nulla sit amet porttitor. Ut
+        scelerisque sagittis tortor, eget sagittis neque rhoncus at. Morbi justo lorem, tincidunt a
+        pellentesque et, scelerisque sit amet ex. Aliquam justo leo, pretium sed nunc sit amet,
+        feugiat sagittis diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis
+        nunc sit amet turpis facilisis ultrices nec vel diam. Nam sed lacinia nisi. Mauris dapibus
+        elit at risus efficitur, in gravida nisi consequat. Suspendisse varius congue dignissim.
+        Curabitur ac libero commodo, tristique nisl ac, posuere turpis. Phasellus mattis dignissim
+        eros sit amet elementum. In non leo in nisi convallis finibus nec vel dolor. Donec tempus
+        justo vel libero mollis tincidunt. In mattis neque eget erat vulputate tempus quis at nibh.
+        In ultrices dui in nulla bibendum, vel tincidunt justo accumsan. Pellentesque pellentesque
+        ac nulla sit amet porttitor. Ut scelerisque sagittis tortor, eget sagittis neque rhoncus at.
+        Morbi justo lorem, tincidunt a pellentesque et, scelerisque sit amet ex. Aliquam justo leo,
+        pretium sed nunc sit amet, feugiat sagittis diam. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Duis quis nunc sit amet turpis facilisis ultrices nec vel diam. Nam sed
+        lacinia nisi. Mauris dapibus elit at risus efficitur, in gravida nisi consequat. Suspendisse
+        varius congue dignissim. Curabitur ac libero commodo, tristique nisl ac, posuere turpis.
+        Phasellus mattis dignissim eros sit amet elementum. In non leo in nisi convallis finibus nec
+        vel dolor. Donec tempus justo vel libero mollis tincidunt. In mattis neque eget erat
+        vulputate tempus quis at nibh. In ultrices dui in nulla bibendum, vel tincidunt justo
+        accumsan. Pellentesque pellentesque ac nulla sit amet porttitor. Ut scelerisque sagittis
+        tortor, eget sagittis neque rhoncus at. Morbi justo lorem, tincidunt a pellentesque et,
+        scelerisque sit amet ex. Aliquam justo leo, pretium sed nunc sit amet, feugiat sagittis
+        diam.
       </Section>
       <Section id="experience" title="Experience">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis nunc sit amet turpis
@@ -44,7 +82,26 @@ const HomePage = () => {
         nibh. In ultrices dui in nulla bibendum, vel tincidunt justo accumsan. Pellentesque
         pellentesque ac nulla sit amet porttitor. Ut scelerisque sagittis tortor, eget sagittis
         neque rhoncus at. Morbi justo lorem, tincidunt a pellentesque et, scelerisque sit amet ex.
-        Aliquam justo leo, pretium sed nunc sit amet, feugiat sagittis diam.
+        Aliquam justo leo, pretium sed nunc sit amet, feugiat sagittis diam. Lorem ipsum dolor sit
+        amet, consectetur adipiscing elit. Duis quis nunc sit amet turpis facilisis ultrices nec vel
+        diam. Nam sed lacinia nisi. Mauris dapibus elit at risus efficitur, in gravida nisi
+        consequat. Suspendisse varius congue dignissim. Curabitur ac libero commodo, tristique nisl
+        ac, posuere turpis. Phasellus mattis dignissim eros sit amet elementum. In non leo in nisi
+        convallis finibus nec vel dolor. Donec tempus justo vel libero mollis tincidunt. In mattis
+        neque eget erat vulputate tempus quis at nibh. In ultrices dui in nulla bibendum, vel
+        tincidunt justo accumsan. Pellentesque pellentesque ac nulla sit amet porttitor. Ut
+        scelerisque sagittis tortor, eget sagittis neque rhoncus at. Morbi justo lorem, tincidunt a
+        pellentesque et, scelerisque sit amet ex. Aliquam justo leo, pretium sed nunc sit amet,
+        feugiat sagittis diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis
+        nunc sit amet turpis facilisis ultrices nec vel diam. Nam sed lacinia nisi. Mauris dapibus
+        elit at risus efficitur, in gravida nisi consequat. Suspendisse varius congue dignissim.
+        Curabitur ac libero commodo, tristique nisl ac, posuere turpis. Phasellus mattis dignissim
+        eros sit amet elementum. In non leo in nisi convallis finibus nec vel dolor. Donec tempus
+        justo vel libero mollis tincidunt. In mattis neque eget erat vulputate tempus quis at nibh.
+        In ultrices dui in nulla bibendum, vel tincidunt justo accumsan. Pellentesque pellentesque
+        ac nulla sit amet porttitor. Ut scelerisque sagittis tortor, eget sagittis neque rhoncus at.
+        Morbi justo lorem, tincidunt a pellentesque et, scelerisque sit amet ex. Aliquam justo leo,
+        pretium sed nunc sit amet, feugiat sagittis diam.
       </Section>
       <Section id="service" title="Service">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis nunc sit amet turpis
@@ -56,7 +113,26 @@ const HomePage = () => {
         in nulla bibendum, vel tincidunt justo accumsan. Pellentesque pellentesque ac nulla sit amet
         porttitor. Ut scelerisque sagittis tortor, eget sagittis neque rhoncus at. Morbi justo
         lorem, tincidunt a pellentesque et, scelerisque sit amet ex. Aliquam justo leo, pretium sed
-        nunc sit amet, feugiat sagittis diam.
+        nunc sit amet, feugiat sagittis diam. Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Duis quis nunc sit amet turpis facilisis ultrices nec vel diam. Nam sed lacinia nisi.
+        Mauris dapibus elit at risus efficitur, in gravida nisi consequat. Suspendisse varius congue
+        dignissim. Curabitur ac libero commodo, tristique nisl ac, posuere turpis. Phasellus mattis
+        dignissim eros sit amet elementum. In non leo in nisi convallis finibus nec vel dolor. Donec
+        tempus justo vel libero mollis tincidunt. In mattis neque eget erat vulputate tempus quis at
+        nibh. In ultrices dui in nulla bibendum, vel tincidunt justo accumsan. Pellentesque
+        pellentesque ac nulla sit amet porttitor. Ut scelerisque sagittis tortor, eget sagittis
+        neque rhoncus at. Morbi justo lorem, tincidunt a pellentesque et, scelerisque sit amet ex.
+        Aliquam justo leo, pretium sed nunc sit amet, feugiat sagittis diam. Lorem ipsum dolor sit
+        amet, consectetur adipiscing elit. Duis quis nunc sit amet turpis facilisis ultrices nec vel
+        diam. Nam sed lacinia nisi. Mauris dapibus elit at risus efficitur, in gravida nisi
+        consequat. Suspendisse varius congue dignissim. Curabitur ac libero commodo, tristique nisl
+        ac, posuere turpis. Phasellus mattis dignissim eros sit amet elementum. In non leo in nisi
+        convallis finibus nec vel dolor. Donec tempus justo vel libero mollis tincidunt. In mattis
+        neque eget erat vulputate tempus quis at nibh. In ultrices dui in nulla bibendum, vel
+        tincidunt justo accumsan. Pellentesque pellentesque ac nulla sit amet porttitor. Ut
+        scelerisque sagittis tortor, eget sagittis neque rhoncus at. Morbi justo lorem, tincidunt a
+        pellentesque et, scelerisque sit amet ex. Aliquam justo leo, pretium sed nunc sit amet,
+        feugiat sagittis diam.
         <ScrollAnimation animateIn="pulse" animateOnce initiallyVisible>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis nunc sit amet turpis
           facilisis ultrices nec vel diam. Nam sed lacinia nisi. Mauris dapibus elit at risus
@@ -78,13 +154,51 @@ const HomePage = () => {
           libero commodo, tristique nisl ac, posuere turpis. Phasellus mattis dignissim eros sit
           amet elementum. In non leo in nisi convallis finibus nec vel dolor. Donec tempus justo vel
           libero mollis tincidunt. In mattis neque eget erat vulputate tempus quis at nibh. In
-          ultrices dui
+          ultrices dui in nulla bibendum, vel tincidunt justo accumsan. Pellentesque pellentesque ac
+          nulla sit amet porttitor. Ut scelerisque sagittis tortor, eget sagittis neque rhoncus at.
+          Morbi justo lorem, tincidunt a pellentesque et, scelerisque sit amet ex. Aliquam justo
+          leo, pretium sed nunc sit amet, feugiat sagittis diam. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Duis quis nunc sit amet turpis facilisis ultrices nec vel
+          diam. Nam sed lacinia nisi. Mauris dapibus elit at risus efficitur, in gravida nisi
+          consequat. Suspendisse varius congue dignissim. Curabitur ac libero commodo, tristique
+          nisl ac, posuere turpis. Phasellus mattis dignissim eros sit amet elementum. In non leo in
+          nisi convallis finibus nec vel dolor. Donec tempus justo vel libero mollis tincidunt. In
+          mattis neque eget erat vulputate tempus quis at nibh. In ultrices dui in nulla bibendum,
+          vel tincidunt justo accumsan. Pellentesque pellentesque ac nulla sit amet porttitor. Ut
+          scelerisque sagittis tortor, eget sagittis neque rhoncus at. Morbi justo lorem, tincidunt
+          a pellentesque et, scelerisque sit amet ex. Aliquam justo leo, pretium sed nunc sit amet,
+          feugiat sagittis diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis
+          nunc sit amet turpis facilisis ultrices nec vel diam. Nam sed lacinia nisi. Mauris dapibus
+          elit at risus efficitur, in gravida nisi consequat. Suspendisse varius congue dignissim.
+          Curabitur ac libero commodo, tristique nisl ac, posuere turpis. Phasellus mattis dignissim
+          eros sit amet elementum. In non leo in nisi convallis finibus nec vel dolor. Donec tempus
+          justo vel libero mollis tincidunt. In mattis neque eget erat vulputate tempus quis at
+          nibh. In ultrices dui
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInRightBig" animateOnce>
-          in nulla bibendum, vel tincidunt justo accumsan. Pellentesque pellentesque ac nulla sit
-          amet porttitor. Ut scelerisque sagittis tortor, eget sagittis neque rhoncus at. Morbi
-          justo lorem, tincidunt a pellentesque et, scelerisque sit amet ex. Aliquam justo leo,
-          pretium sed
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis nunc sit amet turpis
+          facilisis ultrices nec vel diam. Nam sed lacinia nisi. Mauris dapibus elit at risus
+          efficitur, in gravida nisi consequat. Suspendisse varius congue dignissim. Curabitur ac
+          libero commodo, tristique nisl ac, posuere turpis. Phasellus mattis dignissim eros sit
+          amet elementum. In non leo in nisi convallis finibus nec vel dolor. Donec tempus justo vel
+          libero mollis tincidunt. In mattis neque eget erat vulputate tempus quis at nibh. In
+          ultrices dui in nulla bibendum, vel tincidunt justo accumsan. Pellentesque pellentesque ac
+          nulla sit amet porttitor. Ut scelerisque sagittis tortor, eget sagittis neque rhoncus at.
+          Morbi justo lorem, tincidunt a pellentesque et, scelerisque sit amet ex. Aliquam justo
+          leo, pretium sed nunc sit amet, feugiat sagittis diam. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Duis quis nunc sit amet turpis facilisis ultrices nec vel
+          diam. Nam sed lacinia nisi. Mauris dapibus elit at risus efficitur, in gravida nisi
+          consequat. Suspendisse varius congue dignissim. Curabitur ac libero commodo, tristique
+          nisl ac, posuere turpis. Phasellus mattis dignissim eros sit amet elementum. In non leo in
+          nisi convallis finibus nec vel dolor. Donec tempus justo vel libero mollis tincidunt. In
+          mattis neque eget erat vulputate tempus quis at nibh. In ultrices dui in nulla bibendum,
+          vel tincidunt justo accumsan. Pellentesque pellentesque ac nulla sit amet porttitor. Ut
+          scelerisque sagittis tortor, eget sagittis neque rhoncus at. Morbi justo lorem, tincidunt
+          a pellentesque et, scelerisque sit amet ex. Aliquam justo leo, pretium sed nunc sit amet,
+          feugiat sagittis diam. in nulla bibendum, vel tincidunt justo accumsan. Pellentesque
+          pellentesque ac nulla sit amet porttitor. Ut scelerisque sagittis tortor, eget sagittis
+          neque rhoncus at. Morbi justo lorem, tincidunt a pellentesque et, scelerisque sit amet ex.
+          Aliquam justo leo, pretium sed
         </ScrollAnimation>
         nunc sit amet, feugiat sagittis diam. Lorem ipsum dolor sit amet, consectetur adipiscing
         elit. Duis quis nunc sit amet turpis facilisis ultrices nec vel diam. Nam sed lacinia nisi.

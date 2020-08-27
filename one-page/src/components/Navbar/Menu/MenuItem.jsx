@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
+import { Link } from 'react-scroll';
 
 import mq from '../../../gatsby-plugin-theme-ui/media-queries';
 
@@ -57,18 +58,18 @@ const style = {
   },
 };
 
-const activeStyle = {
-  boxShadow: (t) => `0 -2px 0 ${t.colors.header.nav.item.boxShadowColor} inset`,
-};
-
-const MenuItem = ({ children, to, isActive, onClick }) => (
-  <button
-    type="button"
-    sx={{ ...style, ...(isActive ? activeStyle : {}) }}
-    onClick={(e) => onClick(e, to)}
+const MenuItem = ({ children, to, onClick }) => (
+  <Link
+    to={to}
+    sx={style}
+    offset={-50}
+    activeClass="menu-item__active"
+    spy
+    smooth="easeInOutQuart"
+    onClick={onClick}
   >
     {children}
-  </button>
+  </Link>
 );
 
 export default MenuItem;

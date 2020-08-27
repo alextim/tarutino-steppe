@@ -1,4 +1,4 @@
-import mainNav from '../../config/footerNavItems';
+import mainNav from '../../config/mainNavItems';
 
 const useMainNavtems = () => mainNav;
 

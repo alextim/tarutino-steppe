@@ -16,6 +16,11 @@ const GlobalStyle = () => (
       *::after {
         box-sizing: border-box;
       }
+
+      .menu-item__active {
+        box-shadow: 0 -2px 0 ${colors.header.nav.item.boxShadowColor} inset;
+      }
+
       html,
       body {
         -moz-osx-font-smoothing: grayscale;

@@ -1073,10 +1073,10 @@
     "@emotion/sheet" "0.9.4"
     "@emotion/utils" "0.11.3"
 
-"@emotion/core@^10.0.34":
-  version "10.0.34"
-  resolved "https://registry.yarnpkg.com/@emotion/core/-/core-10.0.34.tgz#a643889dc32bdde829482539c9438a026631187c"
-  integrity sha512-Kcs8WHZG1NgaVFQsSpgN07G0xpfPAKUclwKvUqKrYrJovezl9uTz++1M4JfXHrgFVEiJ5QO46hMo1ZDDfvY/tw==
+"@emotion/core@^10.0.35":
+  version "10.0.35"
+  resolved "https://registry.yarnpkg.com/@emotion/core/-/core-10.0.35.tgz#513fcf2e22cd4dfe9d3894ed138c9d7a859af9b3"
+  integrity sha512-sH++vJCdk025fBlRZSAhkRlSUoqSqgCzYf5fMOmqqi3bM6how+sQpg3hkgJonj8GxXM4WbD7dRO+4tegDB9fUw==
   dependencies:
     "@babel/runtime" "^7.5.5"
     "@emotion/cache" "^10.0.27"
@@ -4607,11 +4607,6 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@^2.2.5:
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
-  integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
-
 clean-stack@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/clean-stack/-/clean-stack-2.2.0.tgz#ee8472dbb129e727b31e8a10a427dee9dfe4008b"
@@ -5495,11 +5490,6 @@ date-fns@^2.0.1, date-fns@^2.14.0, date-fns@^2.8.1:
   version "2.15.0"
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.15.0.tgz#424de6b3778e4e69d3ff27046ec136af58ae5d5f"
   integrity sha512-ZCPzAMJZn3rNUvvQIMlXhDr4A+Ar07eLeGsGREoWU19a3Pqf5oYa+ccd+B3F6XVtQY6HANMFdOQ8A+ipFnvJdQ==
-
-debounce@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/debounce/-/debounce-1.2.0.tgz#44a540abc0ea9943018dc0eaa95cce87f65cd131"
-  integrity sha512-mYtLl1xfZLi1m4RtQYlZgJUNQjl4ZxVnHzIR8nLLgi4q1YT8o/WM+MK/f8yfcc9s5Ir5zRaPZyZU6xs1Syoocg==
 
 debug@2, debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.6, debug@^2.6.9:
   version "2.6.9"
@@ -6545,10 +6535,10 @@ eslint-plugin-react-hooks@^1.7.0:
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-1.7.0.tgz#6210b6d5a37205f0b92858f895a4e827020a7d04"
   integrity sha512-iXTCFcOmlWvw4+TOE8CLWj6yX1GwzT0Y6cUfHHZqWnSk144VmVIRcVGtUAzrLES7C798lmvnt02C7rxaOX1HNA==
 
-eslint-plugin-react-hooks@^4.0.8:
-  version "4.0.8"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.0.8.tgz#a9b1e3d57475ccd18276882eff3d6cba00da7a56"
-  integrity sha512-6SSb5AiMCPd8FDJrzah+Z4F44P2CdOaK026cXFV+o/xSRzfOiV1FNFeLl2z6xm3yqWOQEZ5OfVgiec90qV2xrQ==
+eslint-plugin-react-hooks@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.1.0.tgz#6323fbd5e650e84b2987ba76370523a60f4e7925"
+  integrity sha512-36zilUcDwDReiORXmcmTc6rRumu9JIM3WjSvV0nclHoUQ0CNrX866EwONvLR/UqaeqFutbAnVu8PEmctdo2SRQ==
 
 eslint-plugin-react@^7.20.2:
   version "7.20.5"
@@ -6712,10 +6702,10 @@ eslint@^6.8.0:
     text-table "^0.2.0"
     v8-compile-cache "^2.0.3"
 
-eslint@^7.6.0:
-  version "7.6.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.6.0.tgz#522d67cfaea09724d96949c70e7a0550614d64d6"
-  integrity sha512-QlAManNtqr7sozWm5TF4wIH9gmUm2hE3vNRUvyoYAa4y1l5/jxD/PQStEjBMQtCqZmSep8UxrcecI60hOpe61w==
+eslint@^7.7.0:
+  version "7.7.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.7.0.tgz#18beba51411927c4b64da0a8ceadefe4030d6073"
+  integrity sha512-1KUxLzos0ZVsyL81PnRN335nDtQ8/vZUD6uMtWbF+5zDtjKcsklIi78XoE0MVL93QvWTu+E5y44VyyCsOMBrIg==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     ajv "^6.10.0"
@@ -14283,22 +14273,13 @@ react-remove-scroll@^2.3.0:
     use-callback-ref "^1.2.3"
     use-sidecar "^1.0.1"
 
-react-scroll-section@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/react-scroll-section/-/react-scroll-section-2.1.0.tgz#eccab09ead381d1e52551397efadfc83216c1644"
-  integrity sha512-Fj3rOEWtI6FdDGSJPmSgg5dEQdtVYHBk1mwikrMAoBySF2XfQ4RsvNFTAYZnph3U2kLqL4HMB1d1RTJGfZmU2w==
+react-scroll@^1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/react-scroll/-/react-scroll-1.8.1.tgz#eb4052265f1606cf60855c981ebcfed1bc3beff3"
+  integrity sha512-UAKmawFHn+c7x/DoXuHqOsQ5xwNk2Dxv7vP8Ft41K2hglPWkshcSos0tMTr8704UkFqImoUGzMTdN4vuZXoqbw==
   dependencies:
-    debounce "^1.2.0"
-    prop-types "^15.6.2"
-
-react-scrollspy@^3.4.3:
-  version "3.4.3"
-  resolved "https://registry.yarnpkg.com/react-scrollspy/-/react-scrollspy-3.4.3.tgz#12bccebc7e2dfe228b873288b3f473904edb3854"
-  integrity sha512-c2QZpMPWxm1HF71h1EqaxBldx2zLYO0aZ24Bcuo2mUWF79T+F6qOtr7XJCzUDm99NOwhVKQD01a7A8VC6c90CQ==
-  dependencies:
-    babel-runtime "^6.26.0"
-    classnames "^2.2.5"
-    prop-types "^15.5.10"
+    lodash.throttle "^4.1.1"
+    prop-types "^15.7.2"
 
 react-side-effect@^2.1.0:
   version "2.1.0"
@@ -16657,6 +16638,11 @@ throat@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/throat/-/throat-5.0.0.tgz#c5199235803aad18754a667d659b5e72ce16764b"
   integrity sha512-fcwX4mndzpLQKBS1DVYhGAcYaYt7vsHNIvQV+WXMvnow5cgjPphq5CaayLaGsjRdSCKZFNGt7/GYAuXaNOiYCA==
+
+throttle-debounce@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/throttle-debounce/-/throttle-debounce-2.3.0.tgz#fd31865e66502071e411817e241465b3e9c372e2"
+  integrity sha512-H7oLPV0P7+jgvrk+6mwwwBDmxTaxnu9HMXmloNLXwnNO0ZxZ31Orah2n8lU1eMPvsaowP2CX+USCgyovXfdOFQ==
 
 through2@^2.0.0, through2@^2.0.1:
   version "2.0.5"
