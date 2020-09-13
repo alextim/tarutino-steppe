@@ -14,6 +14,13 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        path: `${__dirname}/content/assets`,
+        name: 'assets',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         path: `${__dirname}/content/data`,
         name: 'data',
       },
@@ -23,13 +30,6 @@ module.exports = {
       options: {
         path: `${__dirname}/content/pages`,
         name: 'pages',
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/content/assets`,
-        name: 'assets',
       },
     },
     {
@@ -45,8 +45,7 @@ module.exports = {
       options: {
         plugins: [
           /**
-           * gatsby-remark-relative-images must
-           * go before gatsby-remark-images
+           * gatsby-remark-relative-images must go before gatsby-remark-images
            *
            *  */
           {

@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 const path = require('path');
-const { fmImagesToRelative } = require('gatsby-remark-relative-images');
+// const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 
 const i18n = require('../i18n/i18n');
 
@@ -80,7 +80,7 @@ const onMdNode = (node, actions, getNode, createNodeId, createContentDigest) => 
     throw new Error('Frontmatter is absent!');
   }
 
-  fmImagesToRelative(node);
+  // fmImagesToRelative(node);
 
   let { slug } = frontmatter;
   if (!slug) {

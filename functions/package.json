@@ -18,7 +18,7 @@
     "node": ">=10"
   },
   "dependencies": {
-    "@sendgrid/mail": "^7.2.4",
+    "@sendgrid/mail": "^7.2.5",
     "email-validator": "^2.0.4"
   },
   "devDependencies": {
