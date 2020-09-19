@@ -1,7 +1,4 @@
-/* eslint-disable no-console */
 const path = require('path');
-// const { fmImagesToRelative } = require('gatsby-remark-relative-images');
-
 const i18n = require('../i18n/i18n');
 
 const isValidLocale = (locale, fileNode) => {
@@ -80,8 +77,6 @@ const onMdNode = (node, actions, getNode, createNodeId, createContentDigest) => 
     throw new Error('Frontmatter is absent!');
   }
 
-  // fmImagesToRelative(node);
-
   let { slug } = frontmatter;
   if (!slug) {
     slug = `/${slugFileName === 'index' ? dir : slugFileName}`;
@@ -103,8 +98,8 @@ const onMdNode = (node, actions, getNode, createNodeId, createContentDigest) => 
   const getMetaTitle = (title, metaTitle, slg) => {
     const purePath = i18n.purePath(slg);
 
+    // is Root
     if (purePath === '/') {
-      // is Root
       return metaTitle || i18n.locales[locale].siteTitle;
     }
     return `${metaTitle || title} - ${i18n.locales[locale].siteShortName}`;
