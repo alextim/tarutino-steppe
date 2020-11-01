@@ -13,21 +13,21 @@
     "email-validator": "^2.0.4"
   },
   "devDependencies": {
-    "@testing-library/react-hooks": "^3.4.1"
+    "@testing-library/react-hooks": "^3.4.2"
   },
   "peerDependencies": {
     "disable-scroll": ">=0.5.1",
-    "gatsby": ">=2.24.63",
+    "gatsby": ">=2.24.91",
     "react": ">=16.13.1",
     "react-dom": ">=16.13.1",
     "react-icons": ">=3.11.0",
-    "theme-ui": ">=0.3.1"
+    "theme-ui": ">=0.3.0"
   },
   "scripts": {
     "lint": "eslint --fix src/**/*.{js,jsx,md}",
     "stylelint": "stylelint --syntax css-in-js src/**/*.{js,jsx,ts,tsx,css,scss}",
     "format": "prettier-eslint --write 'src/**/*.{js,jsx,json,md}'",
-    "ncu": "ncu -u"
+    "ncu": "ncu -u --timeout 60000"
   },
   "repository": "https://github.com/alextim/kat-2"
 }

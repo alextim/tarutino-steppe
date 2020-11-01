@@ -14,6 +14,7 @@ import transition from './transition';
 const theme = {
   initialColorMode: 'light',
   useColorSchemeMediaQuery: true,
+  useBodyStyles: true,
   breakpoints,
   mediaQueries,
   space,

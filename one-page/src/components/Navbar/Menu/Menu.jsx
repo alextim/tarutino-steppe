@@ -85,7 +85,6 @@ const styleWrapperOpened = {
   transform: 'unset',
 };
 
-
 const Menu = ({ navItems, isMenuOpen, onMenuItemClick }) => {
   return (
     <div sx={{ ...styleWrapper, ...(isMenuOpen ? styleWrapperOpened : {}) }}>
