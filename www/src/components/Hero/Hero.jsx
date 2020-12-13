@@ -1,9 +1,32 @@
 /** @jsx jsx */
 import { jsx, Heading } from 'theme-ui';
-import { BgImage } from '@ait/common-ui';
+// import { BgImage } from '@ait/common-ui';
+import BackgroundImage from 'gatsby-background-image';
 
 import mq from '../../gatsby-plugin-theme-ui/media-queries';
 
+const BgImage = ({ fluid, alt, imgTitle, children }) => {
+  console.warn(fluid);
+  if (!Array.isArray(fluid)) {
+    return (
+      <BackgroundImage Tag="section" id="media-test" fluid={fluid} alt={alt} title={imgTitle}>
+        {children}
+      </BackgroundImage>
+    );
+  }
+  const sources = [
+    fluid[0],
+    {
+      ...fluid[1],
+      media: '(min-width: 980px)',
+    },
+  ];
+  return (
+    <BackgroundImage Tag="section" id="media-test" fluid={sources} alt={alt} title={imgTitle}>
+      {children}
+    </BackgroundImage>
+  );
+};
 const styleTitle = {
   fontSize: '2rem',
   [mq.lg]: {

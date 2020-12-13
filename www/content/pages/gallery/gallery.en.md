@@ -1,8 +1,8 @@
 ---
 title: Gallery
-description: 
-metaTitle: 
-metaDescription:
+description: A selection of beautiful photos and videos about the life of the park
+metaTitle: Gallery of beautiful photos and videos about the life of the park
+metaDescription: Enjoy photos and videos about inhabitants and landscapes of the Tarutino Steppe Natural Ethnographic Park
 cover:
   default: ./images/tarutino-steppe-multicolor.jpg
   mobile: ./images/tarutino-steppe-multicolor-mobile.jpg
@@ -12,7 +12,7 @@ cover:
 template: gallery
 
 sections:
-  - text: Better to see once than to read many times 😊
+  - text: Better to see once than to read many times 😊 Enjoy spectacular photos and interesting videos about the inhabitants of the park, its vegetation, landscapes and different highlights. If you have beautiful photos of the park, share them with us, we will post them on this page or in social networks.
   - items:
     - title: Partridge in the steppe.
       image:
@@ -83,7 +83,7 @@ sections:
     - title: Сommon pheasant.
       image:
         src: ./images/fazan-obiknovenniy.jpg
-        alt: Colorful head of the bird behind high grass.
+        alt: Colorful head of the bird behind the high grass.
         author: Maxim Yakovlev
 
     - title: Kulans close-up.
@@ -162,4 +162,3 @@ sections:
 <br />
 
 <iframe width="560" height="315" data-src="https://www.youtube.com/embed/qTgsiAbj5Yc" class="lazyload"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-

@@ -40,6 +40,7 @@ module.exports = {
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-background-image',
     {
       resolve: 'gatsby-transformer-remark',
       options: {

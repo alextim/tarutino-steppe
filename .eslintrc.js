@@ -27,7 +27,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['prettier', 'emotion', 'react', 'react-hooks', 'import'],
+  plugins: ['prettier', '@emotion', 'react', 'react-hooks', 'import'],
   rules: {
     indent: ['error', 2, { SwitchCase: 1 }],
     quotes: [2, 'single', { avoidEscape: true }],

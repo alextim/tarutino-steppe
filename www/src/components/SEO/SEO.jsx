@@ -38,9 +38,9 @@ const SEO = ({ title, description, locale, pathname, canonical, noindex = false,
       metas={metas}
       config={config}
       address={address}
+      siteMeta={siteMeta}
       socialLinks={socialLinks}
       organization={organization}
-      siteMeta={siteMeta}
       i18n={i18n}
       dows={dows}
     />

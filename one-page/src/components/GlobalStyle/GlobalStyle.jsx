@@ -1,5 +1,5 @@
 import React from 'react';
-import { Global, css } from '@emotion/core';
+import { Global, css } from '@emotion/react';
 
 import sizes from '../../gatsby-plugin-theme-ui/sizes';
 import mq from '../../gatsby-plugin-theme-ui/media-queries';

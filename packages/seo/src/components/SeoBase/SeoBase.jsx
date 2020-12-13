@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
@@ -19,10 +20,6 @@ const SeoBase = ({
   i18n,
   dows,
 }) => {
-  const {
-    legalName,
-    postalAddress: { streetAddress, addressLocality, postalCode, addressCountry },
-  } = address;
   const { phone, email, geo, openingHours } = organization;
 
   const article = false;
@@ -49,14 +46,6 @@ const SeoBase = ({
   const schemaOrg = {
     '@context': 'http://schema.org',
     '@type': 'Organization',
-    legalName,
-    address: {
-      '@type': 'PostalAddress',
-      addressCountry,
-      addressLocality,
-      postalCode,
-      streetAddress: streetAddress.join(', '),
-    },
     name: siteTitle,
     alternateName: siteTitleAlt,
     description: siteDescription,
@@ -64,6 +53,22 @@ const SeoBase = ({
     image: config.siteBusinessPhoto,
     logo: config.siteLogo,
   };
+  if (address) {
+    const { legalName, postalAddress } = address;
+    if (legalName) {
+      schemaOrg.legalName = legalName;
+    }
+    if (postalAddress) {
+      const { streetAddress, addressLocality, postalCode, addressCountry } = postalAddress;
+      schemaOrg.address = {
+        '@type': 'PostalAddress',
+        addressCountry,
+        addressLocality,
+        postalCode,
+        streetAddress: streetAddress.join(', '),
+      };
+    }
+  }
   if (email) {
     schemaOrg.email = email.join();
   }
@@ -109,11 +114,13 @@ const SeoBase = ({
     };
   }
 
+  const metaTitle = title || siteTitle;
+  const metaDescription = description || siteDescription;
   return (
     <Helmet>
       <html lang={htmlLang} />
       {noindex && <meta name="robots" content="noindex" />}
-      <title>{title}</title>
+      <title>{metaTitle}</title>
 
       {i18n &&
         i18n.localeCodes.map((code) => (
@@ -133,7 +140,7 @@ const SeoBase = ({
       )}
       <meta httpEquiv="content-language" content={locale} />
 
-      <meta name="description" content={description} />
+      <meta name="description" content={metaDescription} />
       {canonical && pathname && <link rel="canonical" href={pathname} />}
       <meta name="theme-color" content={config.themeColor} />
 
@@ -154,10 +161,10 @@ const SeoBase = ({
       )}
       <meta property="og:url" content={URL} />
       <meta property="og:type" content={article ? 'article' : 'website'} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
+      <meta property="og:title" content={metaTitle} />
+      <meta property="og:description" content={metaDescription} />
       <meta property="og:image" content={ogImage.src} />
-      <meta property="og:image:alt" content={description} />
+      <meta property="og:image:alt" content={metaDescription} />
       <meta property="og:image:width" content={ogImage.width} />
       <meta property="og:image:height" content={ogImage.height} />
       {socialLinks &&
@@ -172,10 +179,10 @@ const SeoBase = ({
           <meta name="twitter:creator" content={config.twitterCreator || config.twitterSite} />
         </>
       )}
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
+      <meta name="twitter:title" content={metaTitle} />
+      <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:image" content={twitterImage.src} />
-      <meta name="twitter:image:alt" content={description} />
+      <meta name="twitter:image:alt" content={metaDescription} />
       <meta name="twitter:image:width" content={twitterImage.width} />
       <meta name="twitter:image:height" content={twitterImage.height} />
 
