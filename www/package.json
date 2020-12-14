@@ -73,6 +73,7 @@
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/react-hooks": "^3.7.0",
+    "babel-preset-gatsby": "^0.8.0",
     "preval.macro": "^5.0.0",
     "react-test-renderer": "^17.0.1"
   },
