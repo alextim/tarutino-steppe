@@ -5,8 +5,10 @@ import BackgroundImage from 'gatsby-background-image';
 
 import mq from '../../gatsby-plugin-theme-ui/media-queries';
 
+const bgStyle = {
+  height: '100vh',
+};
 const BgImage = ({ fluid, alt, imgTitle, children }) => {
-  console.warn(fluid);
   if (!Array.isArray(fluid)) {
     return (
       <BackgroundImage Tag="section" id="media-test" fluid={fluid} alt={alt} title={imgTitle}>
@@ -14,19 +16,28 @@ const BgImage = ({ fluid, alt, imgTitle, children }) => {
       </BackgroundImage>
     );
   }
+
   const sources = [
     fluid[0],
     {
       ...fluid[1],
-      media: '(min-width: 980px)',
+      media: '(min-width: 480px)',
     },
   ];
   return (
-    <BackgroundImage Tag="section" id="media-test" fluid={sources} alt={alt} title={imgTitle}>
+    <BackgroundImage
+      Tag="section"
+      id="media-test"
+      fluid={sources}
+      alt={alt}
+      title={imgTitle}
+      sx={bgStyle}
+    >
       {children}
     </BackgroundImage>
   );
 };
+
 const styleTitle = {
   fontSize: '2rem',
   [mq.lg]: {

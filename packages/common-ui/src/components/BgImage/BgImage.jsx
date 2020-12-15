@@ -43,7 +43,7 @@ const BgImage = ({
           sx={fakeBgImageStyle}
           fluidMobile={fluid[0]}
           fluidDesktop={fluid[1]}
-          breakPoint={980}
+          breakPoint={480}
           fadeIn={false}
           background
           critical
