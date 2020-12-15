@@ -17,7 +17,14 @@ module.exports = {
     jest: true,
     node: true,
   },
-  extends: ['prettier', 'airbnb', 'airbnb/hooks', 'plugin:react/recommended', 'prettier/react', 'plugin:prettier/recommended'],
+  extends: [
+    'prettier',
+    'airbnb',
+    'airbnb/hooks',
+    'plugin:react/recommended',
+    'prettier/react',
+    'plugin:prettier/recommended',
+  ],
   parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
@@ -28,8 +35,8 @@ module.exports = {
   },
   plugins: ['prettier', '@emotion', 'react', 'react-hooks', 'import'],
   rules: {
-    'react/react-in-jsx-scope': 'off',
-    'react/jsx-uses-react': 'off',
+    // 'react/react-in-jsx-scope': 'off',
+    // 'react/jsx-uses-react': 'off',
     indent: ['error', 2, { SwitchCase: 1 }],
     quotes: [2, 'single', { avoidEscape: true }],
     'jsx-quotes': [2, 'prefer-double'],
