@@ -4,7 +4,7 @@ import { jsx } from 'theme-ui';
 import { Container, FooterWidget, LegalInfo, FooterNavigation } from '@ait/common-ui';
 
 import { useTranslation } from '../../i18n';
-import useLocaleData from '../../hooks/useLocaleData';
+import { useAppContext } from '../../context';
 import useOrganization from '../../hooks/useOrganization';
 import useFooterNavItems from '../../hooks/useFooterNavItems';
 import useSocialLinks from '../../hooks/useSocialLinks';
@@ -66,7 +66,7 @@ const styleColophonBottom = {
 const Footer = () => {
   const { t } = useTranslation();
   const { email, phone } = useOrganization();
-  const { legalName } = useLocaleData();
+  const { address } = useAppContext();
   const navItems = useFooterNavItems();
   const socialLinks = useSocialLinks();
 
@@ -111,7 +111,7 @@ const Footer = () => {
       </div>
       <div sx={styleColophonBottom}>
         <Container>
-          <LegalInfo legalName={legalName} text={t('all_rights_reserved')} />
+          <LegalInfo legalName={address?.legalName} text={t('all_rights_reserved')} />
         </Container>
       </div>
     </footer>
