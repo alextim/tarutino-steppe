@@ -1,8 +1,8 @@
 ---
 title: Nature and culture
-description: 
-metaTitle: 
-metaDescription:
+description: A unique steppe with a rich history and natural diversity
+metaTitle: Nature, history and cultural traditions of the region
+metaDescription: Learn more about the flora and fauna of the Tarutino steppe, as well as the rich cultural traditions and history of the region
 cover:
   default: ./images/tarutino-step-with-flowers.jpg
   mobile: 
@@ -13,11 +13,11 @@ template: nature-and-culture
 
 sections:
   - text: |
-      Get acquainted with the unique nature and cultural heritage of this region, which has managed to preserve and carry through the centuries not only the rich flora and fauna, but also a huge layer of culture and traditions of many nationalities that have inhabited it for centuries. You will not only be able to learn and see with your own eyes a "living" story, but also to taste it, touch it and, of course, take a selfie to remember 😊
+      Get acquainted with the unique nature and cultural heritage of this region, which has managed to preserve and carry through the centuries not only the rich flora and fauna, but also a huge layer of culture and traditions of many nationalities that have inhabited it for centuries. In addition, you can see large wild herbivores, which we returned to the Tarutino steppe to complement its diversity and restore the natural processes that form this unique natural system. You will not only be able to learn and see with your own eyes a "living" story, but also to taste it, touch it and, of course, take a selfie to remember 😊
 
   - title: Nature
     text: |
-      Tarutino steppe is of great value as the second largest after the biosphere reserve "Askania-Nova" steppe area, preserved in a close to natural state. Today it is unique not only for Ukraine - a country with one of the highest rates of plowed territory in the world - but for Europe as a whole. The Tarutino steppe is recognized as an object of the Emerald Network of Europe, and its preservation is an international obligation of Ukraine in accordance with the Bern Convention on the Conservation of European Wildlife and Natural Habitats.
+      Tarutino steppe is of great value as the second largest after the biosphere reserve "Askania-Nova" steppe area, preserved in a close to a natural state. Today it is unique not only for Ukraine - a country with one of the highest rates of plowed territory in the world - but for Europe as a whole. The Tarutino steppe is recognized as an object of the Emerald Network of Europe, and its preservation is an international obligation of Ukraine in accordance with the Bern Convention on the Conservation of European Wildlife and Natural Habitats.
 
     items:
       - title: Flora
@@ -38,8 +38,8 @@ sections:
 
       - title: Large herbivores
         text: |
-          Large herbivores play an important role in natural systems. They support natural meadows and steppes, promote the growth of grasses and trees, and can even open closed forests. Much of Europe's biodiversity is inhabited by open meadows, mosaic landscapes and forest-steppes, open forests and groves, all of which depend on herbivores to survive. When large natural areas are abandoned by humans and herbivores, they are overgrown with shrubs and forests, so their biodiversity is reduced.
-          We return local herbivores to the land where they once lived. Here in the park you can see wild kulans, timid deer, funny saigas and majestic Ukrainian gray bulls that roam the Tarutino steppe and form its landscape and diversity.
+          Large herbivores play an important role in natural systems. They support natural meadows and steppes, promote the growth of grasses and trees, and can even open closed forests. Much of Europe's biodiversity inhabits the open meadows, mosaic landscapes and forest-steppes, open forests and groves, all of which depend on herbivores to survive. When large natural areas are abandoned by humans and herbivores, they are overgrown with shrubs and forests, so their biodiversity declines.
+          We return local herbivores species to the land where they once lived. Here in the park you can see wild kulans, timid fallow deer, funny saigas, noble red deers, friendly water buffalos and majestic Ukrainian gray bulls that roam free in the Tarutino steppe and form its landscape and diversity.
         image:
           src: ./images/kulans-in-the-steppe.jpg
           alt: Herd of wild asses in the steppe.
@@ -47,12 +47,12 @@ sections:
 
   - title: Cultural heritage
     text: |
-      Tarutino lands are located in the very center of the historical and ethnographic region, known as “Budzhak” or “Southern Bessarabia” – the steppe part of the Danube-Dniester interfluve. Therefore, even in antiquity and later it was inhabited by many nationalities that left their mark on these lands, both in the form of historical objects and in the form of traditions, foundations and characteristics of local cuisine.
+      Tarutino lands are located in the very center of the historical and ethnographic region, known as "Budzhak" or "Southern Bessarabia" – the steppe part of the Danube-Dniester interfluve. Therefore, even in antiquity and later it was inhabited by many nationalities that left their mark on these lands, both in the form of historical objects and in the form of traditions and characteristics of local cuisine.
 
     items:
       - title: Region in antiquity
         text: |
-          This region has long been one of the ethnocultural «crossroads» of Europe. Here are the mounds indicating the presence of the Cimmerians, Scythians, Sarmatians, etc. Up to the Polovtsy, Pechenegs and Nogais. In the Middle Ages, the Budzhak lands belonged to many powers: Bulgaria, Kievan Rus, the Galicia-Volyn Principality, and Moldova. From the XV century they became part of the Ottoman Empire and were inhabited by Nogais – nomads of the Turkic and Mongolian world.
+          This region has long been one of the ethnocultural "crossroads" of Europe. Here are the mounds indicating the presence of the Cimmerians, Scythians, Sarmatians, etc. Up to the Polovtsy, Pechenegs and Nogais. In the Middle Ages, the Budzhak lands belonged to many countries: Bulgaria, Kievan Rus, the Galicia-Volyn Principality, and Moldova. From the XV century they became part of the Ottoman Empire and were inhabited by Nogais – nomads of the Turkic and Mongolian world.
         image:
           src: ./images/borodinski-klad.jpg
           alt: Old silver and gold weapons found in Bessarabia.
@@ -60,7 +60,7 @@ sections:
 
       - title: Multicultural region
         text: |
-          At the end of the eighteenth century. Russian Old Believers, Moldavian peasants and Ukrainian Cossacks begin to penetrate into this region. In 1812, in the Bucharest world, Budzhak departs from the Russian Empire. The Nogais were evicted, and their tracts were settled by state peasants (Ukrainians, Moldavians, Russians) and “foreign colonists” (Germans, Bulgarians, Gagauzians). After the war, in 1946, at the initiative of G.K. Zhukov, the population of the villages on the border of the Saratsky and Tarutinsky regions was evicted, and the territory itself was turned into an artillery range.
+          At the end of the eighteenth century Russian Old Believers, Moldavian peasants and Ukrainian Cossacks begin to populate the region. In 1812, in accordance with the Treaty of Bucharest, Budzhak goes to the Russian Empire. The Nogais were evicted, and their localities were inhabited by state peasants (Ukrainians, Moldavians, Russians) and "foreign colonists" (Germans, Bulgarians, Gagauzians). After the war, in 1946, by the initiative of G.K. Zhukov, the population of the villages on the border of the Saratsky and Tarutinsky regions was evicted, and the territory itself was turned into an artillery ground.
         image:
           src: ./images/moldavian-house.jpg
           alt: Old time house of Moldavians in Bessarabia.
@@ -68,7 +68,7 @@ sections:
 
       - title: Nowadays
         text: |
-          Already in our time, on the site of the former Moldavian settlements of Frumushika and Roshia, the Frumushika Nova ethnographic tourist complex has been created, where traditional national courtyards, as well as a church, apiary, and inn, have been recreated according to the open-air museum principle. There is also an agro-sheep breeding enterprise and the largest complex in Europe for raising sheep of Karakul breed. Sheep products – meat and feta cheese – are an integral part of traditional Bessarabian cuisine. The region is also famous for winemaking.
+          Already in our time, on the place of the former Moldavian settlements Frumushika and Roshia, the "Frumushika Nova" ethnographic tourist complex has been created, where traditional national courtyards, as well as a church, apiary, and inn, have been recreated according to the open-air museum principle. There is also an agro-sheep breeding enterprise and the largest complex in Europe for raising sheep of Karakul breed. Sheep products – meat and feta cheese – are an integral part of traditional Bessarabian cuisine. The region is also famous for winemaking.
         image:
           src: ./images/frumushika-nova.jpg
           alt: Green and etno touristic center in Tarutino steppe "Frumushika Nova".
