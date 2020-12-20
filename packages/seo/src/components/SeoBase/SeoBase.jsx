@@ -65,7 +65,7 @@ const SeoBase = ({
         addressCountry,
         addressLocality,
         postalCode,
-        streetAddress: streetAddress.join(', '),
+        streetAddress: streetAddress && streetAddress.join(', '),
       };
     }
   }

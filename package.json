@@ -7,12 +7,9 @@
   "scripts": {
     "build": "yarn workspace www build",
     "dev": "yarn workspace www develop",
-    "dev:1": "yarn workspace one-page develop",
     "clean": "yarn workspace www clean",
-    "clean:1": "yarn workspace one-page clean",
     "serve": "yarn workspace www serve",
     "lint": "eslint --fix www/src/**/*.{js,jsx,md}",
-    "lint:1": "eslint --fix one-page/src/**/*.{js,jsx,md}",
     "lint:all": "yarn workspaces run lint",
     "stylelint": "yarn workspace www stylelint",
     "format": "yarn workspace www format",
@@ -28,8 +25,7 @@
     "packages": [
       "packages/*",
       "functions",
-      "www",
-      "one-page"
+      "www"
     ]
   },
   "husky": {
@@ -48,9 +44,9 @@
     "audit-ci": "^3.1.1",
     "babel-eslint": "^10.1.0",
     "cross-env": "^7.0.3",
-    "eslint": "^7.15.0",
+    "eslint": "^7.16.0",
     "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-prettier": "^7.0.0",
+    "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.3.0",
