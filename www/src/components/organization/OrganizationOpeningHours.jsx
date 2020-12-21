@@ -6,7 +6,7 @@ import { useTranslation } from '../../i18n';
 
 const wrapStyle = {
   display: 'grid',
-  gridTemplateColumns: '2rem 3rem 1rem 3rem',
+  gridTemplateColumns: '4rem 3rem 1rem 3rem',
   rowGap: '0.1rem',
   columnGap: '0.1rem',
 };
@@ -18,11 +18,22 @@ const dowStyle = {
 const OrganizationOpeningHours = ({ openingHours }) => {
   const { t } = useTranslation();
 
+  const parseDow = (s) => {
+    if (!s) {
+      return '';
+    }
+    const dow = s.split('-');
+    if (dow.length === 1) {
+      return t(`dow.d2.${s}`);
+    }
+    return `${t(`dow.d2.${dow[0]}`)}-${t(`dow.d2.${dow[1]}`)}`;
+  };
+
   return (
     <div sx={wrapStyle}>
       {openingHours.map(([dow, timeStart, timeFinish]) => (
         <React.Fragment key={dow}>
-          <div sx={dowStyle}>{t(`dow.d2.${dow}`)}</div>
+          <div sx={dowStyle}>{parseDow(dow)}</div>
           <div>{timeStart}</div>
           <div>-</div>
           <div>{timeFinish}</div>

@@ -7,6 +7,7 @@
   "scripts": {
     "build": "yarn workspace www build",
     "dev": "yarn workspace www develop",
+    "dev:off": "yarn workspace www develop --offline",
     "clean": "yarn workspace www clean",
     "serve": "yarn workspace www serve",
     "lint": "eslint --fix www/src/**/*.{js,jsx,md}",
