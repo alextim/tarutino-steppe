@@ -54,24 +54,12 @@
   value: Thank you for your message!
 - key: cf.we_will_response
   value: We will response you in a nearest time.
-- key: nav.home
-  value: Home
-- key: nav.about
-  value: About Us
-- key: nav.nature
-  value: Nature & culture
-- key: nav.services
-  value: Services
-- key: nav.gallery
-  value: Gallery
-- key: nav.contacts
-  value: Contacts
 - key: nav.support_us
   value: Support Us
 - key: footer.greeting.title
   value: Welcome!
 - key: footer.greeting.text
-  value: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+  value: 'Welcome to the unique region of the Danube Delta, which will surprise you with a variety of landscapes: from wetlands, small rivers, the Danube lakes, to picturesque steppe areas. We will show you the rich flora and fauna of the region, preserved and restored nature, as well as large herbivores in the wild, which we return to the lands where they once lived. Visit the natural parks of the delta!'
 - key: footer.our_address
   value: Legal Address
 - key: footer.call_us

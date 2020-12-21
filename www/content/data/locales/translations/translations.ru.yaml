@@ -54,24 +54,12 @@
   value: Спасибо за ваше сообщение!
 - key: cf.we_will_response
   value: Мы ответим вам в ближайшее время.
-- key: nav.home
-  value: Домой
-- key: nav.about
-  value: О нас
-- key: nav.nature
-  value: Природа и культура
-- key: nav.services
-  value: Услуги
-- key: nav.gallery
-  value: Галерея
-- key: nav.contacts
-  value: Контакты
 - key: nav.support_us
   value: Поддержите нас
 - key: footer.greeting.title
   value: Добро пожаловать!
 - key: footer.greeting.text
-  value: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+  value: 'Добро пожаловать в уникальный регион дельты Дуная, который порадует вас разнообразием ландшафтов: от водно-болотных угодий, малых рек, Придунайских озер, до живописных степных участков. Мы покажем вам богатый животный и растительный мир региона, сохраненную и восстановленную природу, а также крупных травоядных животных в дикой природе, которых мы возвращаем на земли, где они когда-то жили. Посетите природные парки дельты!'
 - key: footer.our_address
   value: Юридический адрес
 - key: footer.call_us
