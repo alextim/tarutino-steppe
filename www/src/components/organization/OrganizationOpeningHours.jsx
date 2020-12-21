@@ -15,6 +15,7 @@ const dowStyle = {
     content: '":"',
   },
 };
+
 const OrganizationOpeningHours = ({ openingHours }) => {
   const { t } = useTranslation();
 

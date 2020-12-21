@@ -20,6 +20,17 @@ const SeoBase = ({
   i18n,
   dows,
 }) => {
+  const parseDow = (s) => {
+    if (!s) {
+      return '';
+    }
+    const dow = s.split('-');
+    if (dow.length === 1) {
+      return dows[s];
+    }
+    return `${dows[dow[0]]}-${dows[dow[1]]}`;
+  };
+
   const { phone, email, geo, openingHours } = organization;
 
   const article = false;
@@ -79,11 +90,12 @@ const SeoBase = ({
     schemaOrg.sameAs = Object.keys(socialLinks).map((key) => socialLinks[key].to);
   }
   if (Array.isArray(openingHours) && dows) {
-    schemaOrg.openingHours = openingHours.reduce(
+    const a = openingHours.reduce(
       (acc, [dow, timeStart, timeFinish]) =>
-        `${acc}${acc ? ', ' : ''}${dows[dow]}: ${timeStart}-${timeFinish}`,
+        `${acc}${acc ? ', ' : ''}${parseDow(dow)}: ${timeStart}-${timeFinish}`,
       '',
     );
+    schemaOrg.openingHours = a.length === 1 ? a[0] : a;
   }
 
   const schemaWebPage = {
