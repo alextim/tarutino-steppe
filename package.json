@@ -20,7 +20,8 @@
     "ncu": "ncu -u && yarn workspaces run ncu",
     "git:tracked": "git ls-tree -r master --name-only",
     "f:build": "netlify functions:build --debug --src functions",
-    "f:invoke": "netlify functions:invoke contact --debug --payload \"{\"foo\": 1}\""
+    "f:invoke": "netlify functions:invoke contact --debug --payload \"{\"foo\": 1}\"",
+    "translations:json2yaml": "yarn workspace www translations:json2yaml"
   },
   "workspaces": {
     "packages": [
