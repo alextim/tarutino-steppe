@@ -38,6 +38,7 @@ const SeoBase = ({
 
   const URL = `${config.siteUrl}${removeTrailingSlash(pathname)}`;
   const homeURL = i18n ? `${config.siteUrl}${i18n.localizePath('/', locale)}` : URL;
+  const isRoot = URL === homeURL;
 
   const purePath = i18n ? i18n.purePath(pathname) : pathname;
 
@@ -133,7 +134,6 @@ const SeoBase = ({
       <html lang={htmlLang} />
       {noindex && <meta name="robots" content="noindex" />}
       <title>{metaTitle}</title>
-
       {i18n &&
         i18n.localeCodes.map((code) => (
           <link
@@ -151,16 +151,12 @@ const SeoBase = ({
         />
       )}
       <meta httpEquiv="content-language" content={locale} />
-
       <meta name="description" content={metaDescription} />
       {canonical && pathname && <link rel="canonical" href={pathname} />}
       <meta name="theme-color" content={config.themeColor} />
-
       {metas &&
         Object.keys(metas).map((name) => <meta key={name} name={name} content={metas[name]} />)}
-
       {config.fbAppID && <meta property="fb:app_id" content={config.fbAppID} />}
-
       <meta property="og:locale" content={ogLocale} />
       {i18n &&
         i18n.localeCodes
@@ -183,7 +179,6 @@ const SeoBase = ({
         Object.keys(socialLinks).map((key) => (
           <meta key={key} property="og:see_also" content={socialLinks[key].to} />
         ))}
-
       <meta name="twitter:card" content="summary_large_image" />
       {(config.twitterCreator || config.twitterSite) && (
         <>
@@ -197,12 +192,14 @@ const SeoBase = ({
       <meta name="twitter:image:alt" content={metaDescription} />
       <meta name="twitter:image:width" content={twitterImage.width} />
       <meta name="twitter:image:height" content={twitterImage.height} />
-
       <link type="text/plain" href={`${config.siteUrl}/humans.txt`} rel="author" />
-
       <script type="application/ld+json">{JSON.stringify(schemaWebPage)}</script>
-      <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>
-      {geo && <script type="application/ld+json">{JSON.stringify(schemaPlace)}</script>}
+      {isRoot && (
+        <>
+          <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>
+          {geo && <script type="application/ld+json">{JSON.stringify(schemaPlace)}</script>}
+        </>
+      )}{' '}
     </Helmet>
   );
 };
