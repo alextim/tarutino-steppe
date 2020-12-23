@@ -27,7 +27,7 @@ build - 300 minutes /month
 - Receive up to 125K function endpoint requests per month
 - Use up to 100 hours of function run time per month
 ### SendGrid
-Send 40,000 emails for first 30 days after registartion, then 100/day forever.
+Send 40,000 emails for first 30 days after registration, then 100/day forever.
 ## Installation
 
 ### Requirements
