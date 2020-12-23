@@ -74,8 +74,8 @@ sections:
           alt: Молодой сурок в степи.
           author: Petroscan
 
-  	  - text: Дружелюбные и умные водяные буйволы
-	      image:
+      - text: Дружелюбные и умные водяные буйволы
+        image:
           src: ./images/water-buffalo.jpg
           alt: Два водяных буйвола.
           author: Андрей Некрасов / Rewilding Europe

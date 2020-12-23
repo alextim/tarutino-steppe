@@ -74,8 +74,8 @@ sections:
           alt: Молодий бабак у степу.
           author: Petroscan
 
-  	  - text: Доброзичливі та розумні водяні буйволи
-	      image:
+      - text: Доброзичливі та розумні водяні буйволи
+        image:
           src: ./images/water-buffalo.jpg
           alt: Два водяних буйволи.
           author: Андрій Некрасов / Rewilding Europe

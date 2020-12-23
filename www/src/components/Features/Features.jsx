@@ -16,7 +16,7 @@ const innerWrapperStyle = {
   textAlign: 'center',
 };
 
-const itemWrapperStyle = { width: ['100%', '100%', '33.33%'], px: 4, mb: [8, 8, 0] };
+const itemWrapperStyle = { width: ['100%', '100%', '33.33%'], px: 4, mb: 8 };
 const textWrapperStyle = { mt: 3 };
 
 const Features = ({ data, gray, imageStyle }) => {
