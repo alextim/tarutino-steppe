@@ -1,8 +1,8 @@
 ---
-title: Natural and Ethnographic Park "Tarutino Steppe"
+title: Natural Ethnographic Park "Tarutino Steppe"
 description: Welcome!
-metaTitle: This is About Us
-metaDescription: This is About Us
+metaTitle: Natural Ethnographic Park "Tarutinо Steppe" invites tourists
+metaDescription: Tarutinо steppe is an interesting tourist location where you can see wild nature, wildlife and big grazers
 cover:
   default: ./images/kulans-in-the-steppe.jpg
   mobile: ./images/kulans-in-the-steppe-mobile.jpg  
@@ -15,14 +15,23 @@ template: home
 sections:
   - text: |
       <p>
-        Welcome to the page of the “Tarutino Steppe” Natural Ethnographic Park! Our goal is to show you and preserve for posterity the unique nature and culture of the Tarutino steppe - one of the last preserved in its original form steppe plots of Ukraine and Europe. You can see how the steppes of our country looked hundreds of years ago, before they were mastered by man and turned into agricultural land. In addition to the unique carpet of vegetation inherent in the steppes of insects, birds and small animals, in the Tarutino steppe you can meet once inhabited by the steppes of large herbivores - wild kulans, timid fallow deer, amusing saigas and stately Ukrainian gray bulls that roam the steppe and form its landscape and variety. In addition, the cultural heritage of this region is interesting - from the mounds of the Cimmerians, Scythians and Sarmatians, to the dwellings and traditions of different nationalities that lived on these lands subsequently.
+        Welcome to the web-page of the "Tarutino Steppe" Natural Ethnographic Park! Our goal is to show you and preserve for posterity the unique nature and culture of the Tarutino steppe - one of the last untouched steppe plots of Ukraine and Europe. You can see how the steppes of our country looked hundreds of years ago, before they were mastered by man and turned into agricultural land.
       </p>
       <p>
-        It is interesting here, we are waiting for you in the park "Tarutino steppe"!
+		In addition to the unique carpet of vegetation, insects, birds and small animals of the steppe, in the Tarutino steppe you can meet large herbivores that once inhabited the steppe - wild kulans, shy fallow deer, amusing saigas, smart water buffaloes, noble red deer and majestic Ukrainian gray bulls, which roam free in the steppe and shape its landscape and diversity.
+      </p>
+      <p>
+		In addition, the cultural heritage of this region is extremely interesting and rich - from the mounds of the Cimmerians, Scythians and Sarmatians, to the houses and traditions of different nationalities who lived on these lands later on - Ukrainians, Russians, Moldavians, Germans and others. Unfortunately, the modern history of the steppe is rather dramatic. Several years ago, the threat of destruction hung over the Tarutino steppe, and only an active public campaign made it possible to preserve this unique territory, although a third of the steppe was plowed and now needs to be restored. 
+      </p>
+      <p>
+		By visiting the park, you can learn about all these and see all the beauty and riches of the steppe with your own eyes. Check the "Services" page to find the most interesting leisure option in our park. 
+      </p>
+      <p>
+        It's interesting here, we are waiting for you in the Natural Ethnographic Park "Tarutinо Steppe"!
       </p>
   
   - title: Here you can
-    subtitle: Get a unique experience with the wildlife, culture and cuisine of Bessarabia.
+    subtitle: Get a unique experience with the wildlife, culture and cuisine of Bessarabia, preserved till nowadays.
 
     items:
       - text: Experience the wild steppe safari on an electric car
@@ -64,4 +73,22 @@ sections:
           src: ./images/marmotte-bobak.jpg
           alt: Young marmotte in the steppe.
           author: Petroscan
+		  
+	  - text: Friendly and smart water buffaloes
+        image:
+          src: ./images/water-buffalo.jpg
+          alt: Two water buffaloes.
+          author: Andrey Nekrasov / Rewilding Europe
+		  
+      - text: Noble red deers with huge horns
+        image:
+          src: ./images/red-deer.jpg
+          alt: Red deer stands in the grass.
+          author: Grzegorz Leśniewski / Wild Wonders of Europe
+		  
+      - text: Ukrainian grey cattle that Chumaks used to transport the salt
+        image:
+          src: ./images/grey-cattle.jpg
+          alt: Young bull and the cow of Ukrainian grey cattle.
+          author: Kateryna Kurakina
 ---
